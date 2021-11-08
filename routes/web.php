@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +14,36 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::resource('usuarios', UsuarioController::class);
-Route::resource('maqueta',ViewController::class);
+// Route::resource('maquetas','ViewController');
+
+
+// llamados carpetas
+//HOME
+Route::get('home',function(){return view('home.index');})->name('home.index');
+
+//CLIENTES
+Route::get('clientes',function(){return view('clientes.index');})->name('clientes.index');
+Route::get('clientes/create',function(){return view('clientes.create');})->name('clientes.create');
+// Route::get('clientes/{id}',function($id){return view('clientes.show');})->name('clientes.show');
+Route::get('clientes/show',function(){return view('clientes.show');})->name('clientes.show');
+Route ::get('clientes/campaign',function(){return view('clientes.campaign');})->name('clientes.campaign');
+
+//PROVEEDORES
+Route::get('proveedores',function(){return view('proveedores.index');})->name('proveedores.index');
+Route::get('proveedores/create',function(){return view('proveedores.create');})->name('proveedores.create');
+Route::get('proveedores/config',function(){return view('proveedores.config');})->name('proveedores.config');
+
+//REPORTES
+Route::get('reportes',function(){return view('reportes.index');})->name('reportes.index');
+
+//PARAMETRIA
+
+
+
+
+

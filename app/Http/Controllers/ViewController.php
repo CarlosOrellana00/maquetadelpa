@@ -11,20 +11,20 @@ class ViewController extends Controller
       return view('home.index');
     }
 
-    public function clientesindex(){
-      return view('clientes.index');
-    }
+    // public function clientesindex(){
+    //   return view('clientes.index');
+    // }
 
-    public function proveedores(){
+    // public function proveedores(){
 
-    }
+    // }
 
-    public function reportes(){
-      return view('reportes.index');
-    }
+    // public function reportes(){
+    //   return view('reportes.index');
+    // }
 
-    public function parametroindex(){
+    // public function parametroindex(){
 
-    }
+    // }
 }
 

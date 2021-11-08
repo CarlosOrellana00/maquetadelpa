@@ -48,10 +48,6 @@
     </header>
 
     <div class="app-body">
-    {{-- @include("layouts.sidebar") --}}
-    {{-- @extends('layouts.sidebar') --}}
-    {{-- @section('content') --}}
-
 <!-- SIDEBAR -->
        <div class="sidebar">
             <nav class="sidebar-nav">
@@ -81,18 +77,48 @@
 <!--FIN SIDEBAR -->
 
        <main class="main">
-            {{-- <ol class="breadcrumb">
-              <li><a href="">Home</a></li>
-            </ol> --}}
+            <ol class="breadcrumb">
+              <li><a href="">Clientes</a></li>
+              <li><a href="">Ficha Cliente</a></li>
+            </ol>
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                       <h2>Bienvenido Usuario Administrador</h2><br/>
+                       <h2>Ficha Cliente</h2><br/>
+                    </div>
+                    <div class="card-body">
+                      <form class="needs-validation" novalidate>
+
+                        <div class="form-row">
+
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Cliente</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          </div>
+
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Tipo Cliente</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                          </div>
+
+
+                        </div>
+
+                        <div class="form-row">
+
+
+
+                        </div>
+
+                        <div class="form-row">
+
+                        </div>
+
+
+                      </form>
                     </div>
                 </div>
             </div>
-
-
         </main>
     </div>
 

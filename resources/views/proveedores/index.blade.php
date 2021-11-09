@@ -77,8 +77,11 @@
 <!--FIN SIDEBAR -->
 
        <main class="main">
-            <ol class="breadcrumb">
-            </ol>
+            <nav class="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Proveedores</a></li>
+              </ol>
+            </nav>
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">

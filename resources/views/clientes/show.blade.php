@@ -77,10 +77,12 @@
 <!--FIN SIDEBAR -->
 
        <main class="main">
-            <ol class="breadcrumb">
-              <li><a href="">Clientes</a></li>
-              <li><a href="">Ficha Cliente</a></li>
-            </ol>
+            <nav class="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="">Clientes</a></li>
+                <li class="breadcrumb-item"><a href="">Ficha Cliente</a></li>
+              </ol>
+            </nav>
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">

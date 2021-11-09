@@ -42,7 +42,8 @@ Route::get('proveedores/config',function(){return view('proveedores.config');})-
 Route::get('reportes',function(){return view('reportes.index');})->name('reportes.index');
 
 //PARAMETRIA
-
+Route::get('parametria',function(){return view('parametria.mantenedores');})->name('parametria.mantenedores');
+Route::get('parametria/config',function(){return view('parametria.config');})->name('parametria.config');
 
 
 

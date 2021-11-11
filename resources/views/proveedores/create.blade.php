@@ -141,9 +141,53 @@
 
                         <div class="form-row">
 
+                          <div class="col-md-4 mb-3">
+                           <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
+                          </div>
+
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Persona</label>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                Juridica
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Fisica
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Cobertura</label>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                Nacional
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                Internacional
+                              </label>
+                            </div>
+                          </div>
+
                         </div>
 
                         <div class="form-row">
+
+                          <div class="col-md-4">
+                            <div class="input-group">
+                              <span class="input-group-addon" id="basic-addon1">Tipo Proveedor</span>
+                              <input type="text" class="form-control" placeholder="">
+                              <button type="submit"  class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
+                            </div>
+                          </div>
 
                         </div>
 

@@ -158,7 +158,9 @@
                         </div>
 
                         <div class="form-row">
-                          {{-- <div id="map" style="height:560px;"></div> --}}
+                          <div>
+                           <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
+                          </div>
                           <div class="col-md-3 mb-3">
                             <label for="validationCustom01">Referencia</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Oficina #1018" required>
@@ -168,7 +170,6 @@
                         <div>
                           <button class="btn btn-primary" type="submit">Registrar</button>
                         </div>
-
 
                       </form>
                     </div>

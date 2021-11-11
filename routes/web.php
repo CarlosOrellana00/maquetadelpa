@@ -45,6 +45,8 @@ Route::get('reportes',function(){return view('reportes.index');})->name('reporte
 Route::get('parametria',function(){return view('parametria.mantenedores');})->name('parametria.mantenedores');
 Route::get('parametria/config',function(){return view('parametria.config');})->name('parametria.config');
 
+//Keke
+Route::get('keke',function(){return view('keke.index');})->name('keke.index');
 
 
 

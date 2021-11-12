@@ -441,22 +441,11 @@ text-align: center;
 
 
             <div class="row">
-
-
-
               <div class="col-md-4">
-
-
                 <p  style="padding: 0 20px;">Si no desea cambiar su contraseña, dejar aquellos campos vacío:</p>
-
-
                <table style="width: 100%">
-
                 <tr>
-
                   <td style="width:100%; padding: 0 20px;">
-
-
                     <div class="form-group">
                       <div class="input-group">
                         <input placeholder="Ingresar Email" style="text-transform: none !important; height: 34px !important;" type="text" name="email" class="update-email set-value-storage form-control" value="carlos.orellana@connectic.cl">
@@ -464,7 +453,6 @@ text-align: center;
                     </div>
                   </td>
                 </tr>
-
                 <tr>
 
                   <td style="width:100%; padding: 0 20px;">
@@ -522,10 +510,7 @@ text-align: center;
           </div>
 
           <div class="col-md-4">
-
             <p  style="padding: 0 20px;">Para cambiar su contraseña, tenga en cuenta lo siguiente:</p>
-
-
             <ul>
               <li style="line-height: 15px; font-weight: bold;">
                 <i style="color:gray" class="validar-1 fa fa-square-o" aria-hidden="true"></i>
@@ -552,9 +537,6 @@ text-align: center;
                 Debe tener al menos 1 carácter especial
               </li>
             </ul>
-
-
-
           </div>
 
 

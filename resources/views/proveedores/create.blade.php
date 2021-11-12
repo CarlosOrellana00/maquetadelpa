@@ -62,13 +62,13 @@
             <p style="padding: 0 20px;">Persona</p>
             <ul>
                <li style="line-height: 15px; font-weight: bold;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="persoradio" id="persoradio1">
                 <label class="form-check-label" for="flexRadioDefault2">
                   Juridica
                 </label>
               </li>
               <li style="line-height: 15px; font-weight: bold;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="persoradio" id="persoradio2">
                 <label class="form-check-label" for="flexRadioDefault2">
                   Fisica
                 </label>
@@ -80,13 +80,13 @@
             <p style="padding: 0 20px;">Cobertura</p>
             <ul>
                <li style="line-height: 15px; font-weight: bold;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="coberradio" id="coberradio1">
                 <label class="form-check-label" for="flexRadioDefault2">
                   Nacional
                 </label>
               </li>
               <li style="line-height: 15px; font-weight: bold;">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <input class="form-check-input" type="radio" name="coberradio" id="coberradio2">
                 <label class="form-check-label" for="flexRadioDefault2">
                   Internacional
                 </label>

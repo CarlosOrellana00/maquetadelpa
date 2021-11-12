@@ -21,7 +21,7 @@
         </div>
 
       </div>
-      <table class="table table-striped" id="marcas-table">
+      <table class="table table-striped " id="marcas-table">
         <thead>
           <tr>
             <th>Id</th>
@@ -57,6 +57,7 @@
           </tr>
         </tbody>
       </table>
+
       <div class="pull-right">
         <a class="btn btn-primary" href="{{ route('proveedores.create') }}" role="button">Crear Proveedor</a>
         <a class="btn btn-primary" href="" role="button">Campañas</a>

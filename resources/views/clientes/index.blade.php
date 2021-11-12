@@ -55,12 +55,15 @@
             <td>000123</td>
             <td>Jose</td>
             <td>Cliente</td>
-            <td>Los Nogales #122</td>
+            <td>
+              <a class="nav-icon fa fa-globe" href="{{ route('clientes.index')}}"></a>
+            </td>
             <td>Santiago</td>
             <td>Chile</td>
             <td>01/01/2021</td>
             <td>
               <a class="btn btn-primary" href="" role="button">Editar</a>
+              <i class="nav-icon fa fa-shield">
             </td>
           </tr>
         </tbody>

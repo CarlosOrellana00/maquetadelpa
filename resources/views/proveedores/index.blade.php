@@ -39,13 +39,21 @@
           <tr>
             <td>1</td>
             <td>William Logic</td>
-            <td></td>
+            <td>
+              <a class="nav-icon fa fa-globe" href="{{ route('proveedores.index')}}"></a>
+            </td>
             <td>Brazil</td>
             <td>11-02-2021</td>
             <td>FLETERO</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+              <i class="nav-icon fa fa-check">
+            </td>
+            <td>
+              <i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star">
+            </td>
+            <td>
+              <a class="btn btn-primary" href="" role="button">Selecionar</a>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -31,7 +31,8 @@ Route::get('clientes',function(){return view('clientes.index');})->name('cliente
 Route::get('clientes/create',function(){return view('clientes.create');})->name('clientes.create');
 // Route::get('clientes/{id}',function($id){return view('clientes.show');})->name('clientes.show');
 Route::get('clientes/show',function(){return view('clientes.show');})->name('clientes.show');
-Route ::get('clientes/campaign',function(){return view('clientes.campaign');})->name('clientes.campaign');
+Route::get('clientes/campaign',function(){return view('clientes.campaign');})->name('clientes.campaign');
+Route::get('clientes/showmilla',function(){return view('clientes.showmilla');})->name('clientes.showmilla');
 
 //PROVEEDORES
 Route::get('proveedores',function(){return view('proveedores.index');})->name('proveedores.index');
@@ -47,7 +48,7 @@ Route::get('reportes',function(){return view('reportes.index');})->name('reporte
 Route::get('parametria',function(){return view('parametria.mantenedores');})->name('parametria.mantenedores');
 Route::get('parametria/config',function(){return view('parametria.config');})->name('parametria.config');
 
-//Keke
+//Keke(carpeta de test)
 Route::get('keke',function(){return view('keke.index');})->name('keke.index');
 
 

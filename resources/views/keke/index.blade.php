@@ -1,18 +1,3 @@
-{{-- @extends('keke.app')
-@section('content')
- <nav class="breadcrumb">
-    <ol class="breadcrumb">
-     <li class="breadcrumb-item"><a href="">Home</a></li>
-    </ol>
-  </nav>
-  <div class="container-fluid">
-    <div class="card">
-      <div class="card-header">
-        <h2>Bienvenido Usuario Administrador</h2><br/>
-      </div>
-     </div>
-  </div>
-@endsection --}}
 
 <!DOCTYPE html>
 <html>
@@ -430,10 +415,7 @@ text-align: center;
   <li class="breadcrumb-item">
    <a href="http://52.14.50.96/home">Dashboard</a>
  </li>
- <li class="breadcrumb-item">
-   <a href="http://52.14.50.96/client/contacts">Contactos</a>
- </li>
- <li class="breadcrumb-item active">Nuevo Contacto</li>
+ <li class="breadcrumb-item active">Credenciales</li>
 </ol>
 <div class="container-fluid">
   <div class="animated fadeIn">
@@ -442,423 +424,514 @@ text-align: center;
         <div class="card">
           <div class="card-header">
             <i class="fa fa-plus-square-o fa-lg"></i>
-            <strong>Crear Nuevo Contacto</strong>
+            <strong>Actualizar Credenciales</strong>
           </div>
           <div class="card-body">
-            <form method="POST" action="http://52.14.50.96/client/storeContact" accept-charset="UTF-8" id="form-credenciales" onsubmit="return validation()" autocomplete="off" enctype="multipart/form-data"><input name="_token" type="hidden" value="nNnVwlIAui9LPiIy38TLCxK0ZcCiKuFFbcdKCI7d">
+            <form method="POST" action="http://52.14.50.96/perfil/storeCredentials" accept-charset="UTF-8" id="form-credenciales" onsubmit="return validation()" autocomplete="off" enctype="multipart/form-data"><input name="_token" type="hidden" value="nNnVwlIAui9LPiIy38TLCxK0ZcCiKuFFbcdKCI7d">
+
+
+
+
+
+
 
 
 
             <input name="id" type="hidden" value="73">
 
 
-
             <div class="row">
-              <div class="col-md-12">
-                <div class="row">
 
-                  <div class="col-md-12">
-                    <p>Favor completar los datos de su contacto:</p>
+
+
+              <div class="col-md-4">
+
+
+                <p  style="padding: 0 20px;">Si no desea cambiar su contraseña, dejar aquellos campos vacío:</p>
+
+
+               <table style="width: 100%">
+
+                <tr>
+
+                  <td style="width:100%; padding: 0 20px;">
+
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input placeholder="Ingresar Email" style="text-transform: none !important; height: 34px !important;" type="text" name="email" class="update-email set-value-storage form-control" value="carlos.orellana@connectic.cl">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+
+                  <td style="width:100%; padding: 0 20px;">
+
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input placeholder="Ingresar Contraseña" style="text-transform: none !important; height: 34px !important;" type="text" name="password" autocomplete="new-password" class="update-password set-value-storage form-control">
+                        <div class="input-group-append"><span class="input-group-text" onclick="showPass()"><i class="fa fa-eye"></i></span></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+
+                <tr>
+
+                  <td style="padding: 0 20px;">
+
+
+                   <div class="form-group">
+                    <div class="input-group">
+                      <input placeholder="Repetir Contraseña" style="text-transform: none !important;height: 34px !important;" autocomplete="new-password" type="text"  name="password_confirmation" class="update-password-confirm set-value-storage form-control">
+                      <div class="input-group-append"><span class="input-group-text" onclick="showConfirmPass()"><i class="fa fa-eye"></i></span></div>
+                    </div>
                   </div>
 
- <div class="col-md-3">
-                    <div class="form-group">
-                      <label>Nombre:</label>
-                      <input class="form-control update-name set-value-storage" name="name" type="text">
 
+                </td>
+
+              </tr>
+
+
+              <tr>
+                <td style="padding: 0 20px;">
+
+                  <p style="text-align: left">
+
+
+                    <div id="showErrorPassword" style="display:none; width:93% !important;" class="alert alert-warning">
+
+                      <span id="showErrorPasswordMsj"></span>
+
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     </div>
 
-                  </div>
+                  </p>
+
+                </td>
+              </tr>
 
 
+            </table>
 
-
-                  <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Apellido:</label>
-                     <input class="form-control update-last-name set-value-storage" name="last_name" type="text">
-                   </div>
-                 </div>
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Email:</label>
-                      <input class="form-control update-email set-value-storage" name="email" type="text">
-                   </div>
-                 </div>
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Cargo:</label>
-                     <input class="form-control update-job set-value-storage" name="job" type="text">
-                   </div>
-                 </div>
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Teléfono móvil:</label>
-                     <input class="form-control update-mobile set-value-storage" name="mobile" type="text">
-                   </div>
-                 </div>
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Teléfono fijo:</label>
-                     <input class="form-control update-fijo set-value-storage" name="fijo" type="text">
-                   </div>
-                 </div>
-
-
-
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Identificador Number:</label>
-                     <input class="form-control update-dni set-value-storage" name="dni" type="text">
-                   </div>
-
-                 </div>
-
-
-
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Ciudad:</label>
-                     <input class="form-control update-city set-value-storage" name="city" type="text">
-                   </div>
-                 </div>
-
-
-                 <div class="col-md-3">
-                   <div class="form-group">
-                     <label>País:</label>
-                     <select class="form-control update-country set-value-storage" name="country">
-                     <option value="30">Alemania</option><option value="74">Angola</option>
-                     <option value="66">Arabia Saudita</option><option value="71">Argelia</option>
-                     <option value="43">Argentina</option><option value="42">Australia</option>
-                     <option value="44">Austria</option><option value="64">Bangladesh</option>
-                     <option value="51">Belgica</option><option value="82">Bielorrusia</option>
-                     <option value="16">Bolivia</option><option value="2">Brasil</option>
-                     <option value="77">Bulgaria</option><option value="3">Canada</option>
-                     <option value="17">Colombia</option><option value="34">Corea del Sur</option>
-                     <option value="8">Costa Rica</option><option value="79">Croacia</option>
-                     <option value="29">Cuba</option><option value="1">Chile</option>
-                     <option value="28">China</option><option value="46">Dinamarca</option>
-                     <option value="18">Ecuador</option><option value="69">Egipto</option>
-                     <option value="9">El Salvador</option><option value="40">Emiratos Arabes Unidos</option>
-                     <option value="50">Escocia</option><option value="23">España</option>
-                     <option value="7">Estados Unidos</option><option value="85">Estonia</option>
-                     <option value="56">Filipinas</option><option value="49">Finlandia</option>
-                     <option value="36">Francia</option><option value="54">Grecia</option>
-                     <option value="10">Guatemala</option><option value="38">Holanda</option>
-                     <option value="11">Honduras</option><option value="53">Hungria</option>
-                     <option value="61">India</option><option value="58">Indonesia</option>
-                     <option value="37">Inglaterra</option><option value="86">Irlanda</option>
-                     <option value="78">Islandia</option><option value="67">Israel</option>
-                     <option value="24">Italia</option><option value="31">Japon</option>
-                     <option value="84">Letonia</option><option value="68">Libano</option>
-                     <option value="83">Lituania</option><option value="57">Malasia</option>
-                     <option value="72">Marruecos</option><option value="4">México</option>
-                     <option value="12">Nicaragua</option><option value="73">Nigeria</option>
-                     <option value="47">Noruega</option><option value="55">Nueva Zelanda</option>
-                     <option value="65">Pakistan</option><option value="13">Panamá</option>
-                     <option value="19">Paraguay</option><option value="20">Perú</option>
-                     <option value="45">Polonia</option><option value="33">Portugal</option>
-                     <option value="5">Puerto Rico</option><option value="41">Qatar</option>
-                     <option value="14">Rep. Dominicana</option><option value="52">Republica Checa</option>
-                     <option value="76">Rumania</option><option value="26">Rusia</option><option value="80">Serbia</option>
-                     <option value="62">Singapur</option><option value="63">Sri Lanka</option><option value="75">Sudafrica</option>
-                     <option value="48">Suecia</option><option value="39">Suiza</option><option value="59">Tailandia</option>
-                     <option value="6">Trinidad y Tobago</option><option value="70">Tunez</option><option value="35">Turquia</option>
-                     <option value="27">Ucrania</option><option value="81">Ucrania</option><option value="22">Uruguay</option>
-                     <option value="21">Venezuela</option><option value="60">Vietnam</option></select>
-                 </div>
-               </div>
-
-
-
-               <div class="col-md-3">
-                   <div class="form-group">
-                     <label>Estado:</label>
-                     <select class="form-control update-status set-value-storage" name="status"><option value="ACTIVE">ACTIVO</option><option value="INACTIVE">INACTIVO</option></select>
-                 </div>
-               </div>
-
-
-
-                 <div class="col-md-12">
-
-                  <table style="width: 100%">
-
-                    <tr>
-                      <td style="padding: 0 20px;">
-
-                        <p style="text-align: left">
-
-
-                          <div id="showErrorPassword" style="display:none; width:93% !important;" class="alert alert-warning">
-
-                            <span id="showErrorPasswordMsj"></span>
-
-                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                          </div>
-
-                        </p>
-
-                      </td>
-                    </tr>
-
-
-                  </table>
-
-                </div>
-
-
-
-                <div class="form-group col-md-12">
-                  <input class="btn btn-primary" type="submit" value="Guardar">
-                  <a href="http://52.14.50.96/client/contacts" class="btn btn-secondary">Cancelar</a>
-                </div>
-
-
-
-
-
-              </div>
-
-
-
-            </div>
           </div>
 
-
-
-
-
-          </form>
-
-
-
-          <style type="text/css">
-
-
-            .alert-custom {
-              padding: 20px;
-              width: 100%;
-              background-color: #8BC34A; /* Red */
-              color: white;
-              margin-bottom: 15px;
-              border-radius: 5px;
-              text-align: center;
-              font-size: 20px;
-            }
-
-
-            .mitable .input-group, .mitable .height-force  {
-              height: 34px !important;
-            }
-
-
-            .mitable input, .mitable select{
-              text-transform: uppercase;
-            }
-
-            .div-custom{
-              vertical-align: middle;
-              padding: 10px;
-            }
-
-          </style>
-
-
-
-          <script type="text/javascript">
-
-
-
-
-
-            function validateField(FIELD,NOMBRE,CONTENEDOR){
-
-
-
-              if(!FIELD || FIELD==false || FIELD=="false"){
-                $('#'+CONTENEDOR).show();
-                $('#'+CONTENEDOR+'Msj').text(NOMBRE+" obligatorio. Favor ingresar uno válido");
-                console.log(NOMBRE+" --> "+FIELD,"FALSE");
-                return false;
-              }
-              else{
-                console.log(NOMBRE+" --> "+FIELD,"TRUE");
-                return true;
-              }
-
-            }
-
-
-
-
-
-            function validation(){
-
-              $('#showErrorPassword').hide();
-              $('#showErrorPasswordMsj').text("");
-
-
-              var name = $('[name=name]').val();
-              var last_name = $('[name=last_name]').val();
-              var email = $('[name=email]').val();
-              var job = $('[name=job]').val();
-              var mobile = $('[name=mobile]').val();
-              var fijo = $('[name=fijo]').val();
-              var dni = $('[name=dni]').val();
-              var direction = $('[name=direction]').val();
-              var city = $('[name=city]').val();
-              var country = $('[name=country]').val();
-
-              let regEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-              let regPhone = /^\+\d{3,5}\d{8,9}$/;
-
-
-              if(!validateField(name)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Nombre");
-                return false;
-              }
-
-
-
-              if(!validateField(last_name)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Apellido");
-                return false;
-              }
-
-
-
-              if(!validateField(email) || !regEmail.test(email)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Email válido");
-                return false;
-              }
-
-
-
-              if(!validateField(job)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Cargo");
-                return false;
-              }
-
-
-
-              if(!validateField(mobile) || !regPhone.test(mobile)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Teléfono Móvil Válido Ej: +56998765432");
-                return false;
-              }
-
-
-              if(!validateField(fijo) || !regPhone.test(fijo)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Teléfono Fijo Válido Ej: +56223456789");
-                return false;
-              }
-
-
-
-
-              if(!validateField(dni) && false){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un Identificador");
-                return false;
-              }
-
-
-
-              if(!validateField(city)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar una Ciudad");
-                return false;
-              }
-
-
-
-              if(!validateField(country)){
-                $('#showErrorPassword').show();
-                $('#showErrorPasswordMsj').text("Debe ingresar un País");
-                return false;
-              }
-
-
-
-
-
-
-
-
-
-
-
-              return true;
-
-
-
-
-
-
-
-
-            }
-
-
-
-            function showPass(){
-              $(".update-password").prop("type", "text");
-              setTimeout(function(){ $(".update-password").prop("type", "password"); }, 3000);
-            }
-
-
-            function showConfirmPass(){
-              $(".update-password-confirm").prop("type", "text");
-              setTimeout(function(){ $(".update-password-confirm").prop("type", "password"); }, 3000);
-            }
-
-          </script>
-
-
-
-
-
-
-
-
+          <div class="col-md-4">
+
+            <p  style="padding: 0 20px;">Para cambiar su contraseña, tenga en cuenta lo siguiente:</p>
+
+
+            <ul>
+              <li style="line-height: 15px; font-weight: bold;">
+                <i style="color:gray" class="validar-1 fa fa-square-o" aria-hidden="true"></i>
+                <i style="color: green; display: none;" class="validation-1 fa fa-check-square-o" aria-hidden="true"></i> Contraseña Alfanumérica
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <i style="color:gray" class="validar-2 fa fa-square-o" aria-hidden="true"></i>
+                <i style="color: green; display: none;" class="validation-2 fa fa-check-square-o" aria-hidden="true"></i>
+                Mínimo 8 carácteres
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <i style="color:gray" class="validar-3 fa fa-square-o" aria-hidden="true"></i>
+                <i style="color: green; display: none;" class="validation-3 fa fa-check-square-o" aria-hidden="true"></i>
+                Debe contener al menos 3 letras
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <i style="color:gray" class="validar-4 fa fa-square-o" aria-hidden="true"></i>
+                <i style="color: green; display: none;" class="validation-4 fa fa-check-square-o" aria-hidden="true"></i>
+                Debe tener al menos 1 mayúscula
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <i style="color:gray" class="validar-5 fa fa-square-o" aria-hidden="true"></i>
+                <i style="color: green; display: none;" class="validation-5 fa fa-check-square-o" aria-hidden="true"></i>
+                Debe tener al menos 1 carácter especial
+              </li>
+            </ul>
+
+
+
+          </div>
 
 
         </div>
 
 
 
-      </center>
+
+
+        <input type="hidden" name="is_validated" value="1">
+
+                <div class="form-group col-sm-12">
+          <input class="btn btn-primary" type="submit" value="Guardar">
+          <a href="http://52.14.50.96/perfil/credentials" class="btn btn-secondary">Cancelar</a>
+        </div>
+
+
+
+        </form>
+
+
+
+        <style type="text/css">
+
+
+          .alert-custom {
+            padding: 20px;
+            width: 100%;
+            background-color: #8BC34A; /* Red */
+            color: white;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+          }
+
+
+          .mitable .input-group, .mitable .height-force  {
+            height: 34px !important;
+          }
+
+
+          .mitable input, .mitable select{
+            text-transform: uppercase;
+          }
+
+          .div-custom{
+            vertical-align: middle;
+            padding: 10px;
+          }
+
+        </style>
+
+
+
+        <script type="text/javascript">
+
+          $(document).ready(function() {
+
+            setTimeout(function(){ $(".update-password").prop("type", "password"); }, 1000);
+
+            setTimeout(function(){ $(".update-password-confirm").prop("type", "password"); }, 1000);
+          });
+
+
+
+          $(document).on("keyup", ".update-password", function (e) {
+
+            e.preventDefault();
+
+            clearTimeout(window.timeValidPassword);
+            var pass = $(this).val();
+            window.timeValidPassword = setTimeout(function(){
+
+              var isValid = isValidPassword(pass);
+
+
+            //validPasswordSeparate(pass);
+
+            if(!isValid){
+              $('.mensaje-validacion-password-update').show();
+              $('.mensaje-validacion-password-update').text("Contraseña incorrecta");
+            }
+            else $('.mensaje-validacion-password-update').hide();
+
+          },1500);
 
 
 
 
-      </form>
-    </div>
+
+          });
+
+
+
+
+          $(document).on("keyup", ".update-password-confirm", function (e) {
+
+            e.preventDefault();
+
+            clearTimeout(window.timeValidPasswordConfirm);
+            var pass = $(this).val();
+            window.timeValidPasswordConfirm = setTimeout(function(){
+
+              var isValid = isValidPassword(pass);
+
+              if(!isValid){
+                $('.mensaje-validacion-password-update-confirm').show();
+                $('.mensaje-validacion-password-update-confirm').text("Contraseña incorrecta");
+              }
+              else{
+                if(!NewIsEqualPasswordRegister()){
+                  $('.mensaje-validacion-password-update-confirm').show();
+                  $('.mensaje-validacion-password-update-confirm').text("Contraseñas diferentes");
+                }
+                else{
+                  $('.mensaje-pass-equal').show();
+                  $('.mensaje-validacion-password-update-confirm').hide();
+                }
+              }
+
+            },1500);
+
+
+
+
+
+          });
+
+
+
+          function validateField(FIELD,NOMBRE,CONTENEDOR){
+
+
+
+            if(!FIELD || FIELD==false || FIELD=="false"){
+              $('#'+CONTENEDOR).show();
+              $('#'+CONTENEDOR+'Msj').text(NOMBRE+" obligatorio. Favor ingresar uno válido");
+              console.log(NOMBRE+" --> "+FIELD,"FALSE");
+              return false;
+            }
+            else{
+              console.log(NOMBRE+" --> "+FIELD,"TRUE");
+              return true;
+            }
+
+          }
+
+
+
+          function NewIsEqualPasswordRegister(){
+
+            var pass_1 =  $('[name=password]').val();
+            var pass_2 =  $('[name=password_confirmation]').val();
+
+
+            if(pass_1!=pass_2){
+
+              return false;
+
+            }
+            else return true;
+
+
+          }
+
+
+
+          function isValidPassword(PASS){
+
+
+
+            $('.mensaje-pass-equal').hide();
+            $('.mensaje-validacion-password-update').hide();
+            $('.mensaje-validacion-password-update-confirm').hide();
+
+
+
+            var status = true;
+
+
+        //Validacion 1 [Alfanumerica]
+        var regex = /^.*[a-zA-Z0-9].*$/;
+        if(regex.test(PASS)){
+          $('.validation-1').show();
+          $('.validar-1').hide();
+        }
+        else{
+          $('.validation-1').hide();
+          $('.validar-1').show();
+          status = false;
+        }
+
+
+
+        //Validacion 2 [Min 8 caracteres]
+        if(PASS.length>=8){
+          $('.validation-2').show();
+          $('.validar-2').hide();
+        }
+        else{
+          $('.validation-2').hide();
+          $('.validar-2').show();
+          status = false;
+        }
+
+
+        //Validacion 3 [Min 3 letras]
+        var regex = /^(.*[a-zA-Z]){3}.*$/;
+        if(regex.test(PASS)){
+          $('.validation-3').show();
+          $('.validar-3').hide();
+        }
+        else{
+          $('.validation-3').hide();
+          $('.validar-3').show();
+          status = false;
+        }
+
+
+        //Validacion 4 [1 Mayuscula]
+        var regex = /^.*[A-Z]{1,}.*$/;
+        if(regex.test(PASS)){
+          $('.validation-4').show();
+          $('.validar-4').hide();
+        }
+        else{
+          $('.validation-4').hide();
+          $('.validar-4').show();
+          status = false;
+        }
+
+
+
+        //Validacion 5 [Especial]
+        var regex = /^.*[!@#$%^&+_*\-=.]{1,}.*$/;
+        if(regex.test(PASS)){
+          $('.validation-5').show();
+          $('.validar-5').hide();
+        }
+        else{
+          $('.validation-5').hide();
+          $('.validar-5').show();
+          status = false;
+        }
+
+
+
+
+
+
+
+
+
+        return status;
+
+
+
+      }
+
+      function validation(){
+
+        $('#showErrorPassword').hide();
+        $('#showErrorPasswordMsj').text("");
+
+        console.log("UpdatePass");
+
+        var password = $('[name=password]').val();
+        var confirmar_password = $('[name=password_confirmation]').val();
+        var email = $('[name=email]').val();
+
+
+        let regEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+
+
+
+        if(!validateField(email)){
+          $('#showErrorPassword').show();
+          $('#showErrorPasswordMsj').text("Debe ingresar un email");
+          return false;
+        }
+
+
+
+
+          var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        if(!regex.test(email)){
+          $('#showErrorPassword').show();
+          $('#showErrorPasswordMsj').text("Debe ingresar un email válido");
+          return false;
+        }
+
+
+
+
+
+        if(password=="" && confirmar_password=="") return true;
+
+
+
+
+
+
+
+
+        if(!isValidPassword(password)){
+          $('#showErrorPassword').show();
+          $('#showErrorPasswordMsj').text("Crear Contraseña Incorrecto. Favor ingresar una contraseña válida");
+          return false;
+        }
+
+
+        if(!isValidPassword(confirmar_password)){
+          $('#showErrorPassword').show();
+          $('#showErrorPasswordMsj').text("Repetir Contraseña Incorrecto. Favor ingresar una contraseña válida");
+          return false;
+        }
+
+
+        if(password!==confirmar_password){
+          $('#showErrorPassword').show();
+          $('#showErrorPasswordMsj').text("Contraseña diferentes. Favor ingresar una válida");
+          return false;
+        }
+
+
+
+
+
+
+        return true;
+
+
+
+
+
+
+
+
+      }
+
+
+
+      function showPass(){
+        $(".update-password").prop("type", "text");
+        setTimeout(function(){ $(".update-password").prop("type", "password"); }, 3000);
+      }
+
+
+      function showConfirmPass(){
+        $(".update-password-confirm").prop("type", "text");
+        setTimeout(function(){ $(".update-password-confirm").prop("type", "password"); }, 3000);
+      }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
   </div>
+
+
+</center>
+
+
+
+
+</form>
+</div>
+</div>
 </div>
 </div>
 </div>

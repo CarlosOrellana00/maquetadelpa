@@ -45,7 +45,6 @@
               <option>3</option>
             </select>
           </div>
-          {{-- Grafico iria aqui --}}
         </div>
         <div class="form-row ">
 

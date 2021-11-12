@@ -2,8 +2,8 @@
 @section('content')
 <nav class="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="">Proveedores</a></li>
-    <li class="breadcrumb-item"><a href="">Crear Proveedor</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('proveedores.index') }}">Proveedores</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('proveedores.create') }}">Crear Proveedor</a></li>
   </ol>
 </nav>
 <div class="container-fluid">
@@ -54,10 +54,6 @@
 
         <div class="form-row">
 
-          <div class="col-md-4 mb-4">
-            <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
-          </div>
-
           <div class="col-md-4">
             <p style="padding: 0 20px;">Persona</p>
             <ul>
@@ -94,6 +90,9 @@
             </ul>
           </div>
 
+          <div class="col-md-4 mb-4">
+            <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
+          </div>
         </div>
 
         <div class="form-row">

@@ -312,7 +312,7 @@ text-align: center;
     <div class="sidebar">
     <nav class="sidebar-nav">
         <ul class="nav">
-            <li class="nav-item ">
+            <li class="nav-item active">
     <a class="nav-link" href="http://52.14.50.96/home">
         <i class="nav-icon fa fa-bar-chart"></i>
         <span>Dashboard</span>
@@ -411,513 +411,379 @@ text-align: center;
 
 
 
-        <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-   <a href="http://52.14.50.96/home">Dashboard</a>
- </li>
- <li class="breadcrumb-item active">Credenciales</li>
-</ol>
-<div class="container-fluid">
-  <div class="animated fadeIn">
-        <div class="row">
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-header">
-            <i class="fa fa-plus-square-o fa-lg"></i>
-            <strong>Actualizar Credenciales</strong>
-          </div>
-          <div class="card-body">
-            <form method="POST" action="http://52.14.50.96/perfil/storeCredentials" accept-charset="UTF-8" id="form-credenciales" onsubmit="return validation()" autocomplete="off" enctype="multipart/form-data"><input name="_token" type="hidden" value="nNnVwlIAui9LPiIy38TLCxK0ZcCiKuFFbcdKCI7d">
 
+<script src="http://52.14.50.96/js/chartjs.js"></script>
 
 
+<script type="text/javascript">
 
+  function openUrlModal(URL){
 
 
+  window.URLIFRAME = URL;
+  $('#myModalIframe').modal('show');
 
 
+}
 
-            <input name="id" type="hidden" value="73">
 
 
-            <div class="row">
-              <div class="col-md-4">
-                <p  style="padding: 0 20px;">Si no desea cambiar su contraseña, dejar aquellos campos vacío:</p>
-               <table style="width: 100%">
-                <tr>
-                  <td style="width:100%; padding: 0 20px;">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Ingresar Email" style="text-transform: none !important; height: 34px !important;" type="text" name="email" class="update-email set-value-storage form-control" value="carlos.orellana@connectic.cl">
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
+$(document).on("click", ".btnIframe", function(){
+  window.URLIFRAME = $(this).attr('url');
+  $('#myModalIframe').find('iframe').attr('src',window.URLIFRAME);
 
-                  <td style="width:100%; padding: 0 20px;">
+  setTimeout(function(){ openUrlModal(window.URLIFRAME); }, 1000);
 
 
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input placeholder="Ingresar Contraseña" style="text-transform: none !important; height: 34px !important;" type="text" name="password" autocomplete="new-password" class="update-password set-value-storage form-control">
-                        <div class="input-group-append"><span class="input-group-text" onclick="showPass()"><i class="fa fa-eye"></i></span></div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
+});
 
 
-                <tr>
 
-                  <td style="padding: 0 20px;">
+  $(document).ready(function(){
 
 
-                   <div class="form-group">
-                    <div class="input-group">
-                      <input placeholder="Repetir Contraseña" style="text-transform: none !important;height: 34px !important;" autocomplete="new-password" type="text"  name="password_confirmation" class="update-password-confirm set-value-storage form-control">
-                      <div class="input-group-append"><span class="input-group-text" onclick="showConfirmPass()"><i class="fa fa-eye"></i></span></div>
-                    </div>
-                  </div>
 
+/*
+$('.btnIframe').click(function(){
+  window.URLIFRAME = $(this).attr('data-url');
 
-                </td>
+  openUrlModal(window.URLIFRAME);
+});
 
-              </tr>
+*/
 
+$('.iframe-close').click(function(){
+  //window.location.reload();
+});
 
-              <tr>
-                <td style="padding: 0 20px;">
 
-                  <p style="text-align: left">
 
+$('#myModalIframe').on('show.bs.modal',function(){      //correct here use 'shown.bs.modal' event which comes in bootstrap3
+  //$('#myModalIframe').find('iframe').attr('src',window.URLIFRAME);
 
-                    <div id="showErrorPassword" style="display:none; width:93% !important;" class="alert alert-warning">
+});
 
-                      <span id="showErrorPasswordMsj"></span>
+});
 
-                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    </div>
+</script>
 
-                  </p>
 
-                </td>
-              </tr>
 
+<div id="myModalIframe" class="modal modal-force fade in">
+  <div>
+    <div class="modal-dialog">
+      <div class="modal-content" style="background:rgba(0,0,0,0.3); !important; height:90vh">
 
-            </table>
 
-          </div>
+       <div class="modal-header">
 
-          <div class="col-md-4">
-            <p  style="padding: 0 20px;">Para cambiar su contraseña, tenga en cuenta lo siguiente:</p>
-            <ul>
-              <li style="line-height: 15px; font-weight: bold;">
-                <i style="color:gray" class="validar-1 fa fa-square-o" aria-hidden="true"></i>
-                <i style="color: green; display: none;" class="validation-1 fa fa-check-square-o" aria-hidden="true"></i> Contraseña Alfanumérica
-              </li>
-              <li style="line-height: 15px; font-weight: bold;">
-                <i style="color:gray" class="validar-2 fa fa-square-o" aria-hidden="true"></i>
-                <i style="color: green; display: none;" class="validation-2 fa fa-check-square-o" aria-hidden="true"></i>
-                Mínimo 8 carácteres
-              </li>
-              <li style="line-height: 15px; font-weight: bold;">
-                <i style="color:gray" class="validar-3 fa fa-square-o" aria-hidden="true"></i>
-                <i style="color: green; display: none;" class="validation-3 fa fa-check-square-o" aria-hidden="true"></i>
-                Debe contener al menos 3 letras
-              </li>
-              <li style="line-height: 15px; font-weight: bold;">
-                <i style="color:gray" class="validar-4 fa fa-square-o" aria-hidden="true"></i>
-                <i style="color: green; display: none;" class="validation-4 fa fa-check-square-o" aria-hidden="true"></i>
-                Debe tener al menos 1 mayúscula
-              </li>
-              <li style="line-height: 15px; font-weight: bold;">
-                <i style="color:gray" class="validar-5 fa fa-square-o" aria-hidden="true"></i>
-                <i style="color: green; display: none;" class="validation-5 fa fa-check-square-o" aria-hidden="true"></i>
-                Debe tener al menos 1 carácter especial
-              </li>
-            </ul>
-          </div>
 
+        <button class="btn btn-danger iframe-close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span><i class="fa fa-close"></i></button>
 
-        </div>
 
 
 
+      </div>
 
+      <div class="modal-body">
 
-        <input type="hidden" name="is_validated" value="1">
+       <div class="row">
 
-                <div class="form-group col-sm-12">
-          <input class="btn btn-primary" type="submit" value="Guardar">
-          <a href="http://52.14.50.96/perfil/credentials" class="btn btn-secondary">Cancelar</a>
-        </div>
+         <div class="col-md-12">
 
+          <iframe style="width:100%; height:70vh; border: none; border-radius:3px;" src=""></iframe>
 
 
-        </form>
 
-
-
-        <style type="text/css">
-
-
-          .alert-custom {
-            padding: 20px;
-            width: 100%;
-            background-color: #8BC34A; /* Red */
-            color: white;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 20px;
-          }
-
-
-          .mitable .input-group, .mitable .height-force  {
-            height: 34px !important;
-          }
-
-
-          .mitable input, .mitable select{
-            text-transform: uppercase;
-          }
-
-          .div-custom{
-            vertical-align: middle;
-            padding: 10px;
-          }
-
-        </style>
-
-
-
-        <script type="text/javascript">
-
-          $(document).ready(function() {
-
-            setTimeout(function(){ $(".update-password").prop("type", "password"); }, 1000);
-
-            setTimeout(function(){ $(".update-password-confirm").prop("type", "password"); }, 1000);
-          });
-
-
-
-          $(document).on("keyup", ".update-password", function (e) {
-
-            e.preventDefault();
-
-            clearTimeout(window.timeValidPassword);
-            var pass = $(this).val();
-            window.timeValidPassword = setTimeout(function(){
-
-              var isValid = isValidPassword(pass);
-
-
-            //validPasswordSeparate(pass);
-
-            if(!isValid){
-              $('.mensaje-validacion-password-update').show();
-              $('.mensaje-validacion-password-update').text("Contraseña incorrecta");
-            }
-            else $('.mensaje-validacion-password-update').hide();
-
-          },1500);
-
-
-
-
-
-          });
-
-
-
-
-          $(document).on("keyup", ".update-password-confirm", function (e) {
-
-            e.preventDefault();
-
-            clearTimeout(window.timeValidPasswordConfirm);
-            var pass = $(this).val();
-            window.timeValidPasswordConfirm = setTimeout(function(){
-
-              var isValid = isValidPassword(pass);
-
-              if(!isValid){
-                $('.mensaje-validacion-password-update-confirm').show();
-                $('.mensaje-validacion-password-update-confirm').text("Contraseña incorrecta");
-              }
-              else{
-                if(!NewIsEqualPasswordRegister()){
-                  $('.mensaje-validacion-password-update-confirm').show();
-                  $('.mensaje-validacion-password-update-confirm').text("Contraseñas diferentes");
-                }
-                else{
-                  $('.mensaje-pass-equal').show();
-                  $('.mensaje-validacion-password-update-confirm').hide();
-                }
-              }
-
-            },1500);
-
-
-
-
-
-          });
-
-
-
-          function validateField(FIELD,NOMBRE,CONTENEDOR){
-
-
-
-            if(!FIELD || FIELD==false || FIELD=="false"){
-              $('#'+CONTENEDOR).show();
-              $('#'+CONTENEDOR+'Msj').text(NOMBRE+" obligatorio. Favor ingresar uno válido");
-              console.log(NOMBRE+" --> "+FIELD,"FALSE");
-              return false;
-            }
-            else{
-              console.log(NOMBRE+" --> "+FIELD,"TRUE");
-              return true;
-            }
-
-          }
-
-
-
-          function NewIsEqualPasswordRegister(){
-
-            var pass_1 =  $('[name=password]').val();
-            var pass_2 =  $('[name=password_confirmation]').val();
-
-
-            if(pass_1!=pass_2){
-
-              return false;
-
-            }
-            else return true;
-
-
-          }
-
-
-
-          function isValidPassword(PASS){
-
-
-
-            $('.mensaje-pass-equal').hide();
-            $('.mensaje-validacion-password-update').hide();
-            $('.mensaje-validacion-password-update-confirm').hide();
-
-
-
-            var status = true;
-
-
-        //Validacion 1 [Alfanumerica]
-        var regex = /^.*[a-zA-Z0-9].*$/;
-        if(regex.test(PASS)){
-          $('.validation-1').show();
-          $('.validar-1').hide();
-        }
-        else{
-          $('.validation-1').hide();
-          $('.validar-1').show();
-          status = false;
-        }
-
-
-
-        //Validacion 2 [Min 8 caracteres]
-        if(PASS.length>=8){
-          $('.validation-2').show();
-          $('.validar-2').hide();
-        }
-        else{
-          $('.validation-2').hide();
-          $('.validar-2').show();
-          status = false;
-        }
-
-
-        //Validacion 3 [Min 3 letras]
-        var regex = /^(.*[a-zA-Z]){3}.*$/;
-        if(regex.test(PASS)){
-          $('.validation-3').show();
-          $('.validar-3').hide();
-        }
-        else{
-          $('.validation-3').hide();
-          $('.validar-3').show();
-          status = false;
-        }
-
-
-        //Validacion 4 [1 Mayuscula]
-        var regex = /^.*[A-Z]{1,}.*$/;
-        if(regex.test(PASS)){
-          $('.validation-4').show();
-          $('.validar-4').hide();
-        }
-        else{
-          $('.validation-4').hide();
-          $('.validar-4').show();
-          status = false;
-        }
-
-
-
-        //Validacion 5 [Especial]
-        var regex = /^.*[!@#$%^&+_*\-=.]{1,}.*$/;
-        if(regex.test(PASS)){
-          $('.validation-5').show();
-          $('.validar-5').hide();
-        }
-        else{
-          $('.validation-5').hide();
-          $('.validar-5').show();
-          status = false;
-        }
-
-
-
-
-
-
-
-
-
-        return status;
-
-
-
-      }
-
-      function validation(){
-
-        $('#showErrorPassword').hide();
-        $('#showErrorPasswordMsj').text("");
-
-        console.log("UpdatePass");
-
-        var password = $('[name=password]').val();
-        var confirmar_password = $('[name=password_confirmation]').val();
-        var email = $('[name=email]').val();
-
-
-        let regEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-
-
-
-
-        if(!validateField(email)){
-          $('#showErrorPassword').show();
-          $('#showErrorPasswordMsj').text("Debe ingresar un email");
-          return false;
-        }
-
-
-
-
-          var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-        if(!regex.test(email)){
-          $('#showErrorPassword').show();
-          $('#showErrorPasswordMsj').text("Debe ingresar un email válido");
-          return false;
-        }
-
-
-
-
-
-        if(password=="" && confirmar_password=="") return true;
-
-
-
-
-
-
-
-
-        if(!isValidPassword(password)){
-          $('#showErrorPassword').show();
-          $('#showErrorPasswordMsj').text("Crear Contraseña Incorrecto. Favor ingresar una contraseña válida");
-          return false;
-        }
-
-
-        if(!isValidPassword(confirmar_password)){
-          $('#showErrorPassword').show();
-          $('#showErrorPasswordMsj').text("Repetir Contraseña Incorrecto. Favor ingresar una contraseña válida");
-          return false;
-        }
-
-
-        if(password!==confirmar_password){
-          $('#showErrorPassword').show();
-          $('#showErrorPasswordMsj').text("Contraseña diferentes. Favor ingresar una válida");
-          return false;
-        }
-
-
-
-
-
-
-        return true;
-
-
-
-
-
-
-
-
-      }
-
-
-
-      function showPass(){
-        $(".update-password").prop("type", "text");
-        setTimeout(function(){ $(".update-password").prop("type", "password"); }, 3000);
-      }
-
-
-      function showConfirmPass(){
-        $(".update-password-confirm").prop("type", "text");
-        setTimeout(function(){ $(".update-password-confirm").prop("type", "password"); }, 3000);
-      }
-
-    </script>
-
-
-
-
-
-
-
+      </div>
 
 
 
   </div>
 
 
-</center>
+
+
+</div>
+
+
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dalog -->
+</div><!-- /.modal-dalog -->
+</div><!-- /.modal -->
+
+
+<style type="text/css">
+  .modal-dialog {
+    max-width: 500px !important;
+    margin: 1.75rem auto;
+}
+</style>
+
+
+<div class="container-fluid">
+
+
+	<div class="row">
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/finalizadas">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/cart.svg"></div>
+					<div class="col-md-8">
+						Compras Finalizadas <br> <label class="tag-custom">0 compras</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
 
 
 
 
-</form>
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/cotizaciones">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/clock.svg"></div>
+					<div class="col-md-8">
+						Cotizaciones <br> <label class="tag-custom">0 compras</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/usuarios">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/users.svg"></div>
+					<div class="col-md-8">
+						Contactos Habilitados <br> <label class="tag-custom">1 contactos</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/fcl">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/fcl.svg"></div>
+					<div class="col-md-8">
+						Servicios FCL <br> <label class="tag-custom">0 servicios</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/lcl">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/lcl.svg"></div>
+					<div class="col-md-8">
+						Servicios LCL <br> <label class="tag-custom">0 servicios</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div class="col-md-4 btnIframe" url="http://52.14.50.96/graph/aerial">
+			<div class="card-custom">
+
+				<div class="row">
+					<div class="col-md-4"><img height="70px" src="http://52.14.50.96/svg/aerial.svg"></div>
+					<div class="col-md-8">
+						Servicios Aéreos <br> <label class="tag-custom">0 servicios</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+		<div class="col-md-4">
+			<div class="card-custom">
+
+				<canvas id="chartOne" width="100" height="100"></canvas>
+
+				<script type="text/javascript">
+					var ctxOne = document.getElementById("chartOne");
+					var chartOne = new Chart(ctxOne, {
+						type: 'pie',
+						data: {
+							labels: ['Finalizadas', 'Sin Pago'],
+							datasets: [{
+								label: '# de compras',
+								data: [0, 0],
+								backgroundColor: [
+								'#8BC34A',
+								'#455A64'
+								],
+								borderColor: [
+								'#8BC34A',
+								'#455A64'
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							cutoutPercentage: 70,
+							responsive: true,
+							maintainAspectRatio: true,
+
+						}
+					});
+				</script>
+
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="col-md-4">
+			<div class="card-custom">
+
+				<canvas id="chartThree" width="100" height="100"></canvas>
+
+				<script type="text/javascript">
+					var ctxThree = document.getElementById("chartThree");
+					var chartThree = new Chart(ctxThree, {
+						type: 'pie',
+						data: {
+							labels: ['Sin Pago', 'Cotizaciones'],
+							datasets: [{
+								label: '# de carros',
+								data: [0, 0],
+								backgroundColor: [
+								'#FFA000',
+								'#455A64'
+								],
+								borderColor: [
+								'#FFA000',
+								'#455A64'
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							cutoutPercentage: 70,
+							responsive: true,
+							maintainAspectRatio: true,
+
+						}
+					});
+				</script>
+
+			</div>
+		</div>
+
+
+
+
+
+		<div class="col-md-4">
+			<div class="card-custom">
+
+				<canvas id="chartTwo" width="100" height="100"></canvas>
+
+				<script type="text/javascript">
+					var ctxTwo = document.getElementById("chartTwo");
+					var chartTwo = new Chart(ctxTwo, {
+						type: 'pie',
+						data: {
+							labels: ['FCL', 'LCL', 'AERIAL'],
+							datasets: [{
+								label: '# de servicios',
+								data: [0,0,0],
+								backgroundColor: [
+								'#03A9F4',
+								'#002469',
+								'#1976D2'
+								],
+								borderColor: [
+								'#03A9F4',
+								'#002469',
+								'#1976D2'
+								],
+								borderWidth: 1
+							}]
+						},
+						options: {
+							cutoutPercentage: 70,
+							responsive: true,
+							maintainAspectRatio: true,
+
+						}
+					});
+				</script>
+
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
+
+
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+
+
+<style type="text/css">
+
+	.card-custom {
+		background: white;
+		padding: 25px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		color: #002469;
+		font-weight: bold;
+		text-align: right;
+		font-size: 18px;
+		margin-top: 16px;
+	}
+
+	.card{
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 10px;
+		padding: 10px;
+		margin-top: 16px;
+	}
+
+	.tag-custom {
+		background: #002469;
+		padding: 5px 10px;
+		color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+	}
+
+</style>
+
+
     </main>
 </div>
 <footer class="app-footer">

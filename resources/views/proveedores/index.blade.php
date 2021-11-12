@@ -40,7 +40,8 @@
             <td>1</td>
             <td>William Logic</td>
             <td>
-              <a class="nav-icon fa fa-globe" href="{{ route('proveedores.index')}}"></a>
+              <a class="" href="{{ route('proveedores.index')}}"></a>
+              <img style="height: 30px;" src="http://52.14.50.96/img/map.png">
             </td>
             <td>Brazil</td>
             <td>11-02-2021</td>

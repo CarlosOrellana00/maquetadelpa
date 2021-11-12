@@ -56,7 +56,9 @@
             <td>Jose</td>
             <td>Cliente</td>
             <td>
-              <a class="nav-icon fa fa-globe" href="{{ route('clientes.index')}}"></a>
+              <a class="" href="{{ route('clientes.index')}}">
+                <img style="height: 30px;" src="http://52.14.50.96/img/map.png">
+              </a>
             </td>
             <td>Santiago</td>
             <td>Chile</td>

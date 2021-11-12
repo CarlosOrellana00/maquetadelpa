@@ -23,6 +23,20 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.index')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Administración -Prov</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.config')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Configuración -Prov</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('reportes.index') }}">
               <i class="nav-icon fa fa-building"></i>
               <span>Reportes KPI</span>
@@ -33,6 +47,20 @@
             <a class="nav-link" href="{{ route('parametria.mantenedores') }}">
               <i class="nav-icon fa fa-bar-chart"></i>
               <span>Parametria</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('parametria.mantenedores') }}">
+              <i class="nav-icon fa fa-bar-chart"></i>
+              <span>Mantenedores -Para</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('parametria.config') }}">
+              <i class="nav-icon fa fa-bar-chart"></i>
+              <span>Personalización Sistema -Para</span>
             </a>
           </li>
 

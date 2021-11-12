@@ -99,14 +99,15 @@
         </div>
 
         <div class="form-row">
-          <div>
-            <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
-          </div>
 
           <div class="form-group col-md-3 mb-3">
             <label for="validationCustom01">Referencia</label>
             <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Oficina #1018"
               required>
+          </div>
+
+          <div class="form-group col-md-3 mb-3">
+            <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
           </div>
 
         </div>

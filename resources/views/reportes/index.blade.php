@@ -19,8 +19,10 @@
       <h2>Listado de Clientes</h2><br />
     </div>
     <div class="card-body">
+
       <form>
         <div class="form-row">
+
           <div class="col-md-4 mb-3">
             <label for="ccmonth">Servicios</label>
             <select class="form-control" id="ccmonth">
@@ -29,6 +31,7 @@
               <option>3</option>
             </select>
           </div>
+
           <div class="col-md-4 mb-3">
             <label for="ccmonth">Fecha Desde</label>
             <select class="form-control" id="ccmonth">
@@ -37,6 +40,7 @@
               <option>3</option>
             </select>
           </div>
+
           <div class="col-md-4 mb-3">
             <label for="ccmonth">Fecha Hasta</label>
             <select class="form-control" id="ccmonth">
@@ -45,20 +49,29 @@
               <option>3</option>
             </select>
           </div>
+
         </div>
-        <div class="form-row ">
+
+
+        <div class="form-row">
 
           <div class="form-row ">
             <div style="width: 600px; height: 100px;">
-              <canvas id="chartOne" width="100p" height="100"></canvas>
+              <canvas id="chartOne" width="100" height="100"></canvas>
             </div>
           </div>
 
         </div>
+
       </form>
+
     </div>
   </div>
 </div>
+
+
+
+
 <script type="text/javascript">
 		var ctxOne = document.getElementById("chartOne");
 		var chartOne = new Chart(ctxOne, {

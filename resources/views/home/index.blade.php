@@ -6,7 +6,7 @@
   <div class="container-fluid">
     <div class="card">
       <div class="card-header">
-        <h2>Bienvenido Usuario Administrador</h2><br/>
+        <h2>Bienvenido Usuario Administrador -</h2><br/>
       </div>
      </div>
   </div>

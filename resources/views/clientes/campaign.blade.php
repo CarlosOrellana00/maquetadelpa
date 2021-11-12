@@ -1,11 +1,9 @@
-@extends('keke.app')
+@extends('layouts.app')
 @section('content')
-<nav class="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="">Clientes</a></li>
-    <li class="breadcrumb-item"><a href="">Campaña Cliente</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('clientes.index')}}">Clientes</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('clientes.campaign')}}">Campaña Cliente</a></li>
   </ol>
-</nav>
 <div class="container-fluid">
   <div class="card">
     <div class="card-header">
@@ -89,7 +87,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btn-primary" type="submit">Generar</button>
+           <a class="pull-right btn btn-primary" href="">Generar</a>
         </div>
       </form>
     </div>

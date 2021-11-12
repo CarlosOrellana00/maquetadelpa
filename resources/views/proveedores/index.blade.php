@@ -1,8 +1,8 @@
-@extends('keke.app')
+@extends('layouts.app')
 @section('content')
 <nav class="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="">Proveedores</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('proveedores.index')}}">Proveedores</a></li>
   </ol>
 </nav>
 <div class="container-fluid">
@@ -21,11 +21,9 @@
         </div>
 
       </div>
-      {{-- tabla --}}
-      <table class="table table-bordered table-striped table-sm">
-        {{-- encabezado columnas --}}
+      <table class="table table-striped" id="marcas-table">
         <thead>
-          <tr class="bg-primary">
+          <tr>
             <th>Id</th>
             <th>Nombre</th>
             <th>Dirección</th>
@@ -37,7 +35,6 @@
             <th>Opciones</th>
           </tr>
         </thead>
-        {{-- filas columnas --}}
         <tbody>
           <tr>
             <td>1</td>
@@ -52,34 +49,10 @@
           </tr>
         </tbody>
       </table>
-      {{-- paginacion tabla --}}
-      <nav>
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#">Anterior</a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">4</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">Siguiente</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div>
-        <button class="btn btn-primary" type="submit">Crear Proveedor</button>
-        <button class="btn btn-primary" type="submit">Campañas</button>
-        <button class="btn btn-primary" type="submit">Fichas</button>
+      <div class="pull-right">
+        <a class="btn btn-primary" href="{{ route('proveedores.create') }}" role="button">Crear Proveedor</a>
+        <a class="btn btn-primary" href="" role="button">Campañas</a>
+        <a class="btn btn-primary" href="" role="button">Fichas</a>
       </div>
 
 

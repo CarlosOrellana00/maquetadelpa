@@ -36,6 +36,8 @@ Route ::get('clientes/campaign',function(){return view('clientes.campaign');})->
 //PROVEEDORES
 Route::get('proveedores',function(){return view('proveedores.index');})->name('proveedores.index');
 Route::get('proveedores/create',function(){return view('proveedores.create');})->name('proveedores.create');
+
+Route::get('proveedores/createcampaign',function(){return view('proveedores.createcampaign');})->name('proveedores.createcampaign');
 Route::get('proveedores/config',function(){return view('proveedores.config');})->name('proveedores.config');
 
 //REPORTES

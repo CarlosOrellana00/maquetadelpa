@@ -1,4 +1,4 @@
-@extends('keke.app')
+@extends('layouts.app')
 @section('content')
 <nav class="breadcrumb">
   <ol class="breadcrumb">

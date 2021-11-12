@@ -1,10 +1,10 @@
-@extends('keke.app')
+@extends('layouts.app')
 @section('content')
-<nav class="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="">Clientes</a></li>
+    <li class="breadcrumb-item">
+     <a href="{{ route('clientes.index')}}">Clientes</a>
+    </li>
   </ol>
-</nav>
 <div class="container-fluid">
   <div class="card">
     <div class="card-header">
@@ -34,9 +34,10 @@
           </div>
         </div>
       </div>
-      <table class="table table-bordered table-striped table-sm">
+
+      <table  class="table table-striped" id="marcas-table">
         <thead>
-          <tr class="bg-primary">
+          <tr class="">
             <th>Id</th>
             <th>Identificador</th>
             <th>Nombre</th>
@@ -59,40 +60,15 @@
             <td>Chile</td>
             <td>01/01/2021</td>
             <td>
-              <a class="btn btn-primary" href="#" role="button">Boton 1</a>
-              <a class="btn btn-success" href="#" role="button">Boton 2</a>
-              <a class="btn btn-warning" href="#" role="button">Boton 3</a>
-              <a class="btn btn-danger" href="#" role="button">Boton 4</a>
+              <a class="btn btn-primary" href="" role="button">Editar</a>
             </td>
           </tr>
         </tbody>
       </table>
-      <nav>
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#">Anterior</a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">4</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">Siguiente</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <button class="btn btn-primary" type="submit">Crear Cliente</button>
-        <button class="btn btn-primary" type="submit">FichaCliente</button>
-        <button class="btn btn-primary" type="submit">Compañia</button>
+      <div class="pull-right">
+        <a class="btn btn-primary" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
+        <a class="btn btn-primary" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
+        <a class="btn btn-primary" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
       </div>
     </div>
   </div>

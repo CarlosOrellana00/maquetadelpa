@@ -12,115 +12,105 @@
 <style type="text/css">
 </style>
 <ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="">Clientes</a></li>
+  <li class="breadcrumb-item"><a href="{{ route("reportes.index")}}">Reportes</a></li>
 </ol>
-<div class="container-fluid">
-  <div class="card">
-    <div class="card-header">
-      <h2>Listado de Clientes</h2><br />
+<div class="card-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <label for="ccmonth">Servicios</label>
+          <select class="form-control" id="ccmonth">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+          </select>
+      </div>
+      <div class="col-4">
+        <label for="ccmonth">Fecha Desde</label>
+          <select class="form-control" id="ccmonth">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+          </select>
+      </div>
+      <div class="col-4">
+        <label for="ccmonth">Fecha Hasta</label>
+          <select class="form-control" id="ccmonth">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+        </select>
+      </div>
     </div>
-    <div class="card-body row">
+    <br>
+    <div class="row">
 
-      <form class="form-row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4 mb-3 ">
-              <label for="ccmonth">Servicios</label>
-              <select class="form-control" id="ccmonth">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </div>
+      {{-- <div class="col-8">
+        <div style="width: 400px; height: 100px;">
+          <canvas id="chartOne" width="100" height="100"></canvas>
+        </div>
+      </div>
 
-            <div class="col-md-4 mb-3 ">
-                <label for="ccmonth">Fecha Desde</label>
-                <select class="form-control" id="ccmonth">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-            </div>
+      <div class="col-4">
+        <button class="btn btn-primary pull-right" type="submit">Exportar</button>
+      </div> --}}
 
-            <div class="col-md-4 mb-3">
-              <label for="ccmonth">Fecha Hasta</label>
-              <select class="form-control" id="ccmonth">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-4">
+
+        <div class="input-group mb-3">
+          <label for="ccmonth">Tipo Cliente</label>
+          <select class="form-control" id="ccmonth">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <label for="ccmonth">Fecha Desde</label>
+          <select class="form-control" id="ccmonth">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <label for="ccmonth">Fecha Hasta</label>
+          <select class="form-control" id="ccmonth">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="col-8">
+
+        <div class="col-8">
+          <div style="width: 400px; height: 100px;">
+            <canvas id="chartOne" width="100" height="100"></canvas>
           </div>
         </div>
 
-        <div class="col-md-12">
-            <div style="width: 400px; height: 100px;">
-              <canvas id="chartOne" width="100" height="100"></canvas>
-            </div>
-        </div>
-        <hr>
+      </div>
 
-
-        <div class="col-md-12">
-          <div class="col-md-4">
-          <table style="width: 100%">
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Tipo Cliente</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Fecha Desde</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Fecha Hasta</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-          </table>
-        </div>
+      <div class="col-4">
+        <button class="btn btn-primary pull-right" type="submit">Exportar</button>
+      </div>
 
 
 
-
-
-      </form>
 
     </div>
-  </div>
 </div>
+</div>
+
 
 
 

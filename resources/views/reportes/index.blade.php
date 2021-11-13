@@ -43,9 +43,9 @@
       </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row align-items-center">
 
-      {{-- <div class="col-8">
+      <div class="col-4">
         <div style="width: 400px; height: 100px;">
           <canvas id="chartOne" width="100" height="100"></canvas>
         </div>
@@ -53,11 +53,11 @@
 
       <div class="col-4">
         <button class="btn btn-primary pull-right" type="submit">Exportar</button>
-      </div> --}}
+      </div>
 
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
 
       <div class="col-4">
 
@@ -107,7 +107,7 @@
 
 
 
-    </div>
+    </div> --}}
 </div>
 </div>
 

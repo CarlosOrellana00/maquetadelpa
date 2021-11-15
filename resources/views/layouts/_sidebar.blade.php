@@ -4,7 +4,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('home.index') }}">
               <i class="nav-icon fa fa-bar-home"></i>
-              <span>Pricing Tarifas</span>
+              <span>Inicio</span>
             </a>
           </li>
 

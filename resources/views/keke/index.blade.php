@@ -1,157 +1,128 @@
 @extends('layouts.app')
 @section('content')
-<style type="text/css">
-  html,
-  body {
-    overflow: hidden;
-    background: white;
-  }
-</style>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style type="text/css">
-</style>
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="">Clientes</a></li>
-</ol>
+<nav class="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ route('proveedores.index') }}">Proveedores</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('proveedores.create') }}">Crear Proveedor</a></li>
+  </ol>
+</nav>
 <div class="container-fluid">
   <div class="card">
     <div class="card-header">
-      <h2>Listado de Clientes</h2><br />
+      <h2>Registro Empresa</h2><br />
     </div>
+    <div class="card-body">
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
 
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Identificador de Empresa</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Razon Social</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Nombre Comercial</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Web</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
+        </div>
 
+        <div class="form-row">
 
-    <div class="card-body row">
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Dirección</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
-      <form class="form-row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4 mb-3 ">
-              <label for="ccmonth">Servicios</label>
-              <select class="form-control" id="ccmonth">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Ciudad</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
-            <div class="col-md-4 mb-3 ">
-                <label for="ccmonth">Fecha Desde</label>
-                <select class="form-control" id="ccmonth">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-            </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">País</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+          </div>
 
-            <div class="col-md-4 mb-3">
-              <label for="ccmonth">Fecha Hasta</label>
-              <select class="form-control" id="ccmonth">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Referencia</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" placeholder="Oficina #1018"
+              required>
+          </div>
+
+        </div>
+
+        <div class="form-row">
+
+          <div class="col-md-4">
+            <p style="padding: 0 20px;">Persona</p>
+            <ul>
+               <li style="line-height: 15px; font-weight: bold;">
+                <input class="form-check-input" type="radio" name="persoradio" id="persoradio1">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Juridica
+                </label>
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <input class="form-check-input" type="radio" name="persoradio" id="persoradio2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Fisica
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <p style="padding: 0 20px;">Cobertura</p>
+            <ul>
+               <li style="line-height: 15px; font-weight: bold;">
+                <input class="form-check-input" type="radio" name="coberradio" id="coberradio1">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Nacional
+                </label>
+              </li>
+              <li style="line-height: 15px; font-weight: bold;">
+                <input class="form-check-input" type="radio" name="coberradio" id="coberradio2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Internacional
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <img src="{{ asset('img/extra/mapa.png') }}" hight="400" width="400" class="rounded float-left" alt="...">
           </div>
         </div>
 
-        <div class="col-md-12">
-            <div style="width: 400px; height: 100px;">
-              <canvas id="chartOne" width="100" height="100"></canvas>
+        <div class="form-row">
+
+          <div class="col-md-4 mb-4">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">Tipo Proveedor</span>
+              <input type="text" class="form-control" placeholder="">
+              <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
             </div>
+          </div>
+
         </div>
 
-        <div class="col-md-12">
-          <div class="col-md-4">
-          <table style="width: 100%">
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Tipo Cliente</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Fecha Desde</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="width:100%; padding: 0 20px;">
-                <div class="form-group">
-                  <div class="input-group">
-                    <label for="ccmonth">Fecha Hasta</label>
-                    <select class="form-control" id="ccmonth">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                  </div>
-                </td>
-              </td>
-            </tr>
-
-          </table>
+        <div class="pull-right">
+          <button class="btn btn-primary" type="submit">Registrar</button>
+          <button class="btn btn-primary" type="submit">Tipo Proveedor</button>
         </div>
-
       </form>
-
     </div>
   </div>
 </div>
-
-
-
-
-<script type="text/javascript">
-  var ctxOne = document.getElementById("chartOne");
-  var chartOne = new Chart(ctxOne, {
-    type: 'bar',
-    data: {
-      labels: ["2011 - Ene", "2011 - Feb", "2011 - Mar","2011 - Ene", "2011 - Feb", "2011 - Mar","2011 - Ene", "2011 - Feb", "2011 - Mar","2011 - Ene", "2011 - Feb", "2011 - Mar"],
-      datasets: [
-        {
-          label: "Record de Acción",
-          backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f"],
-          data: [1, 2, 3,1,2,3,1,2,3,1,2,3]
-        }
-      ]
-    },
-    options: {
-      cutoutPercentage: 70,
-      responsive: true,
-      maintainAspectRatio: true,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-  });
-</script>
 @endsection

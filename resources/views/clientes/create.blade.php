@@ -12,7 +12,7 @@
   <div class="card">
 
     <div class="card-header">
-      <h2>Crear Cliente</h2><br />
+      <h2>Crear Cliente</h2><br/>
     </div>
 
     <div class="card-body">

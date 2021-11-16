@@ -4,6 +4,71 @@
   <li class="breadcrumb-item"><a href="{{ route('proveedores.config')}}">Configuración</a></li>
 </ol>
 <div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Configuración</h2>
+    </div>
+    <div class="card-body">
+      <form class="needs-validation" novalidate>
+
+        <div class="row">
+
+          <div class="col-4">
+            <div class="card-header text-center">
+              <h2>Perfil</h2>
+            </div>
+
+          </div>
+
+          <div class="col-4">
+            <div class="card-header text-center">
+              <h2>Actividades</h2>
+            </div>
+
+          </div>
+
+          <div class="col-4">
+            <div class="card-header text-center">
+              <h2>Configuraciones</h2>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="card-header text-center">
+                <h2>Web</h2>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="card-header text-center">
+                <h2>Chat</h2>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-8">
+            <div class="card-header text-center">
+                <h2>El Grafico</h2>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
   {{-- ARRIBA --}}
   <div class="row">
     <div class="col-md-4 ">

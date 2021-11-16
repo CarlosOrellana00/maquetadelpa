@@ -15,99 +15,77 @@
   <li class="breadcrumb-item"><a href="{{ route("reportes.index")}}">Reportes</a></li>
 </ol>
 <div class="card-body">
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <label for="ccmonth">Servicios</label>
-          <select class="form-control" id="ccmonth">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-          </select>
-      </div>
-      <div class="col-4">
-        <label for="ccmonth">Fecha Desde</label>
-          <select class="form-control" id="ccmonth">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-          </select>
-      </div>
-      <div class="col-4">
-        <label for="ccmonth">Fecha Hasta</label>
-          <select class="form-control" id="ccmonth">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-        </select>
-      </div>
-    </div>
-    <br>
-    <div class="row align-items-center">
+  <div class="container-fluid">
+    <div class="card">
 
-      <div class="col-4">
-        <div style="width: 400px; height: 100px;">
-          <canvas id="chartOne" width="100" height="100"></canvas>
-        </div>
+      <div class="card-header">
+        <h2>Reportes de Gestion</h2><br />
       </div>
 
-      <div class="col-4">
-        <button class="btn btn-primary pull-right" type="submit">Exportar</button>
-      </div>
+      <div class="card-body">
 
-    </div>
+        <form class="needs-validation" novalidate>
 
-    {{-- <div class="row">
-
-      <div class="col-4">
-
-        <div class="input-group mb-3">
-          <label for="ccmonth">Tipo Cliente</label>
-          <select class="form-control" id="ccmonth">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
-
-        <div class="input-group mb-3">
-          <label for="ccmonth">Fecha Desde</label>
-          <select class="form-control" id="ccmonth">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
-
-        <div class="input-group mb-3">
-          <label for="ccmonth">Fecha Hasta</label>
-          <select class="form-control" id="ccmonth">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
-
-      </div>
-
-      <div class="col-8">
-
-        <div class="col-8">
-          <div style="width: 400px; height: 100px;">
-            <canvas id="chartOne" width="100" height="100"></canvas>
+          <div class="row">
+            <div class="col-4">
+              <label for="ccmonth">Servicios</label>
+                <select class="form-control" id="ccmonth">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div class="col-4">
+              <label for="ccmonth">Fecha Desde</label>
+                <select class="form-control" id="ccmonth">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div class="col-4">
+              <label for="ccmonth">Fecha Hasta</label>
+                <select class="form-control" id="ccmonth">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+              </select>
+            </div>
           </div>
-        </div>
+
+          <div class="row">
+
+            <div class="mb-20">
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <div style="width: 400px; height: 100px;">
+                    <canvas id="chartOne" width="100" height="100"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+             <div class="">
+                <button class="btn btn-primary pull-right" type="submit">Exportar</button>
+              </div>
+
+        </form>
 
       </div>
 
-      <div class="col-4">
-        <button class="btn btn-primary pull-right" type="submit">Exportar</button>
-      </div>
+    </div>
+  </div>
 
 
 
 
-    </div> --}}
+
+
+
+
+
 </div>
 </div>
 

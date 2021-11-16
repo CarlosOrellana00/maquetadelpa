@@ -14,7 +14,7 @@
 
         <div class="row">
 
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">Idioma Sistema</label>
@@ -27,7 +27,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">Moneda Sistema</label>
@@ -40,7 +40,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">País</label>
@@ -89,7 +89,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">Configuración Regional</label>
@@ -102,7 +102,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">Nombre Empresa</label>
@@ -115,18 +115,7 @@
             </div>
           </div>
 
-          <div class="col-6">
-            <div class="col-6">
-              <div class="form-group row">
-                <label class="col-md-3 col-form-label" for="file-input">Logo</label>
-                <div class="col-md-9">
-                  <input id="file-input" type="file" name="file-input">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6">
+          <div class="col-4">
             <div class="col-6">
               <div class="form-group">
                 <label for="ccmonth">Administrar Colores</label>
@@ -135,6 +124,17 @@
                   <option>2</option>
                   <option>3</option>
                 </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="col-6">
+              <div class="form-group row">
+                <label class="ccmonth" for="file-input">Logo</label>
+                <div class="col-md-9">
+                  <input id="file-input" type="file" name="file-input">
+                </div>
               </div>
             </div>
           </div>

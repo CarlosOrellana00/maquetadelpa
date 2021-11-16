@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
-<nav class="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ route('proveedores.index')}}">Proveedores</a></li>
+    <li class="breadcrumb-item">
+      <a href="{{ route('proveedores.index')}}">Proveedores</a>
+    </li>
   </ol>
-</nav>
 <div class="container-fluid">
   <div class="card">
     <div class="card-header">
-      <h2>Listado de Proveedores</h2><br />
+      <h2>Administración Proveedores</h2><br />
     </div>
     <div class="card-body">
       <div class="form-group row">

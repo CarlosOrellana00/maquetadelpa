@@ -13,7 +13,7 @@
 
         <div class="row">
 
-          <div class="col-3">
+          <div class="col-6">
             <div class="card-header text-center">
               <h2>Perfil</h2>
             </div>
@@ -43,15 +43,21 @@
                 <div class="row">
                   <div>
                     <label>Puntuación:</label>
-
                   </div>
                 </div>
 
                 <div class="row">
                   <div>
+                    <div>
+                      <label>Comunicacion y capacidad de respuesta:</label>
+
+                    </div>
+                  </div>
+
+                  {{-- <div>
                     <label>Comunicacion y capacidad de respuesta:</label>
 
-                  </div>
+                  </div> --}}
                 </div>
 
                 <div class="row">
@@ -174,7 +180,7 @@
             </div>
           </div>
 
-          <div class="col-3">
+          {{-- <div class="col-3">
             <div class="card-header text-center">
               <h4>Configuraciones</h4>
             </div>
@@ -188,7 +194,7 @@
               <button class="btn btn-primary pull-right mb-3" type="submit">Cotizaciones Respuestas Manuales</button>
               <button class="btn btn-primary pull-right mb-3" type="submit">TAG</button>
             </div>
-          </div>
+          </div> --}}
         </div>
 
         <div class="row">

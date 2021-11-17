@@ -49,7 +49,8 @@
               <span>Documentos -Prov</span>
             </a>
           </li>
-          <li class="nav-item">
+
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('proveedores.tarifa')}}">
               <i class="nav-icon fa fa-id-card-o"></i>
               <span>Princing Tarifas -Prov</span>
@@ -84,7 +85,7 @@
               <i class="nav-icon fa fa-id-card-o"></i>
               <span>TAG -Prov</span>
             </a>
-          </li>
+          </li> --}}
           {{--  --}}
 
           <li class="nav-item">

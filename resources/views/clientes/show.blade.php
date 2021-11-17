@@ -91,7 +91,7 @@
 
           <div class="row">
 
-            <div class="col-6">
+            <div class="col-3">
               <div class="row">
                 <div class="card">
                   <h4>Web</h4>
@@ -100,21 +100,21 @@
                     <div class="">
                       <label for="validationCustom01">Visitas</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="5" readonly>
                       </div>
                     </div>
 
                     <div class="">
                       <label for="validationCustom01">Tiempo</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="15 minutos" readonly>
                       </div>
                     </div>
 
                     <div class="">
                       <label for="validationCustom01">Ultimo Ingreso</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="5 dias" readonly>
                       </div>
                     </div>
 
@@ -127,16 +127,30 @@
                   <div class="card">
 
                     <div class="">
-                      <a class="btn btn-primary hipchat mb-3"  href="" role="button">chat</a>
+                      <button class="btn btn-primary pull-right mb-3" type="submit">
+                        <i class="button nav-icon fa fa-wechat">
+                          Chat
+                        </i>
+                      </button>
                     </div>
+
 
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-6">
-              imagen/grafico
+            <div class="col-9">
+              <div class="card">
+                <div class="text-center">
+                  <h4>Información Comercial del Cliente</h4>
+                </div>
+                <div class="row">
+                  <div class="group">
+                    <img src="{{ asset('img/extra/multi.jpg') }}" hight="900" width="700" class="rounded float-left" alt="...">
+                  </div>
+                </div>
+              </diV>
             </div>
 
           </div>

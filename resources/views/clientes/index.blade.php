@@ -13,9 +13,9 @@
     <div class="card-body">
 
       <div class="pull-right mb-3">
-        <a class="btn btn-primary" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
-        <a class="btn btn-primary" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
-        <a class="btn btn-primary" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
+        <a class="btn btn-success" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
+        <a class="btn btn-success" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
+        <a class="btn btn-success" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
       </div>
 
       <table  class="table table-striped" id="marcas-table">

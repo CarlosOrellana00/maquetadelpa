@@ -12,6 +12,12 @@
     </div>
     <div class="card-body">
 
+      <div class="pull-right mb-3">
+        <a class="btn btn-success" href="{{ route('proveedores.create') }}" role="button">Crear Proveedor</a>
+        <a class="btn btn-success" href="" role="button">Campañas</a>
+        <a class="btn btn-success" href="" role="button">Fichas</a>
+      </div>
+
       <table class="table table-striped " id="marcas-table">
         <thead>
           <tr>
@@ -49,13 +55,6 @@
           </tr>
         </tbody>
       </table>
-
-      <div class="pull-right">
-        <a class="btn btn-primary" href="{{ route('proveedores.create') }}" role="button">Crear Proveedor</a>
-        <a class="btn btn-primary" href="" role="button">Campañas</a>
-        <a class="btn btn-primary" href="" role="button">Fichas</a>
-      </div>
-
 
     </div>
   </div>

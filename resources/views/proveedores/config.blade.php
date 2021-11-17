@@ -13,26 +13,153 @@
 
         <div class="row">
 
-          <div class="col-4">
+          <div class="col-3">
             <div class="card-header text-center">
               <h2>Perfil</h2>
             </div>
+            <div class="card">
 
+              <div class="input-group mb-3">
+                {{-- <span class="input-group-addon" id="basic-addon1">Identificador</span> --}}
+                <label>Identificador</label>
+                <input type="text" class="form-control" placeholder="">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+              </div>
 
+              <div class="card border-primary mb-3">
+                <div class="card-header">Tipo Proveedor</div>
+                <div class="card-body text-primary">
+                  <button class="btn btn-primary mb-3" type="submit">Aereo</button>
+                  <button class="btn btn-primary mb-3" type="submit">Maritimo</button>
+                  <button class="btn btn-primary mb-3" type="submit">Terrestre</button>
+                </div>
+              </div>
+
+              <div class="card border-primary mb-3">
+                <div class="card-header text-center">Puntuación</div>
+
+                <div class="row">
+                  <div>
+                    <label>Puntuación:</label>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>Comunicacion y capacidad de respuesta:</label>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>Cumplio los Costes Estimados:</label>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>Cumplio los Plazos de Entrega:</label>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>Calidad del Resultado:</label>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div>
+                    <label>Habilitado:</label>
+                  </div>
+                  <div class="row">
+                    <ul>
+                      <li style="line-height: 15px; font-weight: bold;">
+                        <input class="form-check-input" type="radio" name="persoradio" id="persoradio1">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Si
+                        </label>
+                      </li>
+                      <li style="line-height: 15px; font-weight: bold;">
+                        <input class="form-check-input" type="radio" name="persoradio" id="persoradio2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          No
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-6">
             <div class="card-header text-center">
               <h2>Actividades</h2>
             </div>
+            <div class="card">
 
+              <diV class="row mb-5">
+                  <div class="col-4">
+                    <p>Filtro de actividades: Cotizaciones</p>
+                  </div>
+                  <div class="col-4">
+                    <p>Fecha de Inicio</p>
+                     <select class="form-control" id="ccmonth">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <p>Fecha de Termino</p>
+                     <select class="form-control" id="ccmonth">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                    </select>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb3">
+                  <div class="card-header">
+                    <h4>Cotización #512</h4>
+                    <p>10-10-2021</p>
+                  </div>
+                  <div class="card-body">
+                    <p>Resputa de Cotización: Aerea </p>
+                    <a href="">ver Respuesta </a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-3">
             <div class="card-header text-center">
-              <h2>Configuraciones</h2>
+              <h4>Configuraciones</h4>
             </div>
-
+            <div class="card">
+              <button class="btn btn-primary pull-right mb-3" type="submit">Contactos</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Documentos</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Princing Tarifas</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Creditos</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Operaciones</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Facturación/Pagos</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">Cotizaciones Respuestas Manuales</button>
+              <button class="btn btn-primary pull-right mb-3" type="submit">TAG</button>
+            </div>
           </div>
         </div>
 
@@ -64,56 +191,4 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-  {{-- ARRIBA --}}
-  <div class="row">
-    <div class="col-md-4 ">
-      <h4>Perfil</h4>
-      <div class="row">
-         {{-- <div class="col-6">col-6 </div>
-         <div class="col-6">col-6 1 </div> --}}
-        <div class="input-group">
-          <span class="input-group-addon" id="basic-addon1">Identificador</span>
-          <input type="text" class="form-control" placeholder="" disabled>
-          <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <h4>Actividades</h4>
-      <p>Filtros de Actividades: Cotizaciones</p>
-    </div>
-    <div class="col-md-4">
-      <h4>Configuraciones</h4>
-      <div class="row">
-        <div class="col-md-1">
-          <button class="btn btn-primary pull-right" type="submit">Contactos</button>
-          <button class="btn btn-primary pull-right" type="submit">Documentos</button>
-          <button class="btn btn-primary pull-right" type="submit">Princing Tarifas</button>
-          <button class="btn btn-primary pull-right" type="submit">Creditos</button>
-          <button class="btn btn-primary pull-right" type="submit">Operaciones</button>
-          <button class="btn btn-primary pull-right" type="submit">Facturación/Pagos</button>
-          <button class="btn btn-primary pull-right" type="submit">Cotizaciones Respuestas Manuales</button>
-          <button class="btn btn-primary pull-right" type="submit">TAG</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  {{-- ABAJO --}}
-  <div class="row">
-    <div class="col-md-6">
-      <h4>1.1</h4>
-    </div>
-    <div class="col-md-6">
-      <h4>1.2</h4>
-    </div>
-  </div>
-</div>
-
-
 @endsection

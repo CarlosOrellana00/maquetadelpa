@@ -11,16 +11,7 @@
       <h2>Administración Proveedores</h2><br />
     </div>
     <div class="card-body">
-      <div class="form-group row">
 
-        <div class="col-md-3 mb-3">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-          </div>
-        </div>
-
-      </div>
       <table class="table table-striped " id="marcas-table">
         <thead>
           <tr>

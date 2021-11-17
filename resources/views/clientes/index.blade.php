@@ -11,28 +11,11 @@
       <h2>Listado de Clientes</h2><br />
     </div>
     <div class="card-body">
-      <div class="form-group row">
-        <div class="col-md-4">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Identificador</span>
-            <input type="text" class="form-control" placeholder="">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Nombre</span>
-            <input type="text" class="form-control" placeholder="">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Tipo Cliente</span>
-            <input type="text" class="form-control" placeholder="">
-            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
-          </div>
-        </div>
+
+      <div class="pull-right mb-3">
+        <a class="btn btn-primary" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
+        <a class="btn btn-primary" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
+        <a class="btn btn-primary" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
       </div>
 
       <table  class="table table-striped" id="marcas-table">
@@ -70,11 +53,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="pull-right">
-        <a class="btn btn-primary" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
-        <a class="btn btn-primary" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
-        <a class="btn btn-primary" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
-      </div>
+
     </div>
   </div>
 </div>

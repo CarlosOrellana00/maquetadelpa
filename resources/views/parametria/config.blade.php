@@ -15,7 +15,7 @@
         <div class="row">
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">Idioma Sistema</label>
                 <select class="form-control" id="ccmonth">
@@ -28,7 +28,7 @@
           </div>
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">Moneda Sistema</label>
                 <select class="form-control" id="ccmonth">
@@ -41,7 +41,7 @@
           </div>
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">País</label>
                 <select class="form-control" id="ccmonth">
@@ -90,7 +90,7 @@
           </div>
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">Configuración Regional</label>
                 <select class="form-control" id="ccmonth">
@@ -103,7 +103,7 @@
           </div>
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">Nombre Empresa</label>
                 <select class="form-control" id="ccmonth">
@@ -116,7 +116,7 @@
           </div>
 
           <div class="col-4">
-            <div class="col-6">
+            <div class="col-mb-6">
               <div class="form-group">
                 <label for="ccmonth">Administrar Colores</label>
                 <select class="form-control" id="ccmonth">

@@ -37,6 +37,15 @@ Route::get('clientes/showmilla',function(){return view('clientes.showmilla');})-
 //PROVEEDORES
 Route::get('proveedores',function(){return view('proveedores.index');})->name('proveedores.index');
 Route::get('proveedores/create',function(){return view('proveedores.create');})->name('proveedores.create');
+//EXTRA
+Route::get('proveedores/contact',function(){return view('proveedores.contact');})->name('proveedores.contact');//contacto
+Route::get('proveedores/document',function(){return view('proveedores.document');})->name('proveedores.document');//doocumentos
+Route::get('proveedores/tarifa',function(){return view('proveedores.tarifa');})->name('proveedores.tarifa');//princing tarifas
+Route::get('proveedores/credit',function(){return view('proveedores.credit');})->name('proveedores.credit');//creditos
+Route::get('proveedores/operation',function(){return view('proveedores.operation');})->name('proveedores.operation');//Operaciones
+Route::get('proveedores/payment',function(){return view('proveedores.payment');})->name('proveedores.payment');//Facturacion/Pagos
+Route::get('proveedores/cotizacion',function(){return view('proveedores.cotizacion');})->name('proveedores.cotizacion');//cotizaciones
+Route::get('proveedores/tag',function(){return view('proveedores.tag');})->name('proveedores.tag');//tag
 
 Route::get('proveedores/createcampaign',function(){return view('proveedores.createcampaign');})->name('proveedores.createcampaign');
 Route::get('proveedores/config',function(){return view('proveedores.config');})->name('proveedores.config');

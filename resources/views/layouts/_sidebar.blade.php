@@ -36,6 +36,57 @@
             </a>
           </li>
 
+          {{--  --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.contact')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Contactos -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.document')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Documentos -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.tarifa')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Princing Tarifas -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.credit')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Creditos -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.operation')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Operaciones -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.payment')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Facturación/Pagos -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.cotizacion')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>Cotizaciones Respuestas Manuales -Prov</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('proveedores.tag')}}">
+              <i class="nav-icon fa fa-id-card-o"></i>
+              <span>TAG -Prov</span>
+            </a>
+          </li>
+          {{--  --}}
+
           <li class="nav-item">
             <a class="nav-link" href="{{ route('reportes.index') }}">
               <i class="nav-icon fa fa-building"></i>

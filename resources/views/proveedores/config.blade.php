@@ -27,9 +27,11 @@
               </div>
 
               <div class="card border-primary mb-3">
-                <div class="card-header">Tipo Proveedor</div>
+                <div class="card-header">
+                  Tipo Proveedor
+                </div>
                 <div class="card-body text-primary">
-                  <button class="btn btn-primary mb-3" type="submit">Aereo</button>
+                  <button class="btn btn-primary mb-3" type="submit">Aéreo</button>
                   <button class="btn btn-primary mb-3" type="submit">Maritimo</button>
                   <button class="btn btn-primary mb-3" type="submit">Terrestre</button>
                 </div>
@@ -200,28 +202,26 @@
                     <div class="">
                       <label for="validationCustom01">Visitas</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="" placeholder="5" readonly>
                       </div>
                     </div>
 
                     <div class="">
                       <label for="validationCustom01">Tiempo</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="" placeholder="15 minutos" readonly>
                       </div>
                     </div>
 
                     <div class="">
                       <label for="validationCustom01">Ultimo Ingreso</label>
                       <div>
-                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" value="" placeholder="5 dias" readonly>
                       </div>
                     </div>
 
                   </div>
                 </div>
-
-
 
             </div>
 
@@ -231,7 +231,11 @@
                   <div class="card">
 
                     <div class="">
-                      <a class="btn btn-primary hipchat mb-3"  href="" role="button">chat</a>
+                      <button class="btn btn-primary pull-right mb-3" type="submit">
+                        <i class="button nav-icon fa fa-wechat">
+                          Chat
+                        </i>
+                      </button>
                     </div>
 
                   </div>
@@ -242,7 +246,14 @@
 
           <div class="col-8">
             <div class="card-header text-center">
-                <h2>El Grafico</h2>
+                {{-- <h2>El Grafico</h2> --}}
+                <div class="card">
+                  <div class="row">
+                    <div class="group">
+                      <img src="{{ asset('img/extra/multi.jpg') }}" hight="900" width="700" class="rounded float-left" alt="...">
+                    </div>
+                  </div>
+                </diV>
               </div>
 
           </div>
@@ -251,4 +262,7 @@
       </div>
     </div>
   </div>
+
+
+
 @endsection

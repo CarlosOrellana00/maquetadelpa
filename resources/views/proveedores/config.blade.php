@@ -139,9 +139,35 @@
                     <p>Resputa de Cotización: Aerea </p>
                     <a href="">ver Respuesta </a>
                   </div>
-
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-12 mb3">
+                  <div class="card-header">
+                    <h4>Cotización #513</h4>
+                    <p>11-10-2021</p>
+                  </div>
+                  <div class="card-body">
+                    <p>Resputa de Cotización: Maritima </p>
+                    <a href="">ver Respuesta </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mb3">
+                  <div class="card-header">
+                    <h4>Cotización #512</h4>
+                    <p>12-10-2021</p>
+                  </div>
+                  <div class="card-body">
+                    <p>Resputa de Cotización: Terrestre</p>
+                    <a href="">ver Respuesta </a>
+                  </div>
+                </div>
+              </div>
+
 
             </div>
           </div>
@@ -166,16 +192,50 @@
         <div class="row">
           <div class="col-4">
             <div class="row">
-              <div class="card-header text-center">
-                <h2>Web</h2>
-              </div>
+
+              <div class="card">
+                  <h4>Web</h4>
+                  <div class="card">
+
+                    <div class="">
+                      <label for="validationCustom01">Visitas</label>
+                      <div>
+                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <label for="validationCustom01">Tiempo</label>
+                      <div>
+                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <label for="validationCustom01">Ultimo Ingreso</label>
+                      <div>
+                        <input type="text" class="form-control" id="validationCustom01" value="" required>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
 
             </div>
 
             <div class="row">
-              <div class="card-header text-center">
-                <h2>Chat</h2>
-              </div>
+              <div class="card">
+                  <h4>Chat</h4>
+                  <div class="card">
+
+                    <div class="">
+                      <a class="btn btn-primary hipchat mb-3"  href="" role="button">chat</a>
+                    </div>
+
+                  </div>
+                </div>
 
             </div>
           </div>

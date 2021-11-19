@@ -47,7 +47,7 @@
             <td>Chile</td>
             <td>01/01/2021</td>
             <td>
-              <a class="btn btn-primary" href="" role="button">Editar</a>
+              <a class="btn btn-warning" href="" role="button">Editar</a>
               <i class="nav-icon fa fa-shield">
             </td>
           </tr>

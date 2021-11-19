@@ -89,11 +89,13 @@
 
           </div>
 
+          {{-- SEGUNDA PARTE --}}
           <div class="row">
 
             <div class="col-3">
+
               <div class="row">
-                <div class="card">
+                <div class="card text-center col-12">
                   <h4>Web</h4>
                   <div class="card">
 
@@ -121,19 +123,17 @@
                   </div>
                 </div>
               </div>
+
               <div class="row">
-                <div class="card">
+                <div class="card text-center col-12">
                   <h4>Chat</h4>
                   <div class="card">
 
-                    <div class="">
                       <button class="btn btn-primary pull-right mb-3" type="submit">
                         <i class="button nav-icon fa fa-wechat">
                           Chat
                         </i>
                       </button>
-                    </div>
-
 
                   </div>
                 </div>
@@ -160,4 +160,40 @@
     </div>
   </div>
 </div>
+
+
+<style type="text/css">
+
+	.card-custom {
+		background: white;
+		padding: 25px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		color: #002469;
+		font-weight: bold;
+		text-align: right;
+		font-size: 18px;
+		margin-top: 16px;
+	}
+
+	.card{
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 10px;
+		padding: 10px;
+		margin-top: 16px;
+	}
+
+	.tag-custom {
+		background: #002469;
+		padding: 5px 10px;
+		color: white;
+		border-radius: 5px;
+		margin-top: 10px;
+	}
+
+</style>
+
 @endsection

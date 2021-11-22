@@ -14,8 +14,6 @@
 
       <div class="pull-right mb-3">
         <a class="btn btn-success" href="{{ route('proveedores.create') }}" role="button">Crear Proveedor</a>
-        <a class="btn btn-success" href="" role="button">Campañas</a>
-        <a class="btn btn-success" href="" role="button">Fichas</a>
       </div>
 
       <table class="table table-striped " id="marcas-table">
@@ -50,7 +48,9 @@
               <i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star"><i class="nav-icon fa fa-star">
             </td>
             <td>
-              <a class="btn btn-primary" href="" role="button">Selecionar</a>
+              <a class="btn btn-warning" href="" role="button">Selecionar</a>
+              <a class="btn btn-primary" href="" role="button">Campañas</a>
+              <a class="btn btn-info" href="" role="button">Fichas</a>
             </td>
           </tr>
         </tbody>

@@ -14,8 +14,7 @@
 
       <div class="pull-right mb-3">
         <a class="btn btn-success" href="{{ route('clientes.create') }}" role="button">Crear Cliente</a>
-        <a class="btn btn-success" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
-        <a class="btn btn-success" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
+
       </div>
 
       <table  class="table table-striped" id="marcas-table">
@@ -48,7 +47,8 @@
             <td>01/01/2021</td>
             <td>
               <a class="btn btn-warning" href="" role="button">Editar</a>
-              <i class="nav-icon fa fa-shield">
+              <a class="btn btn-primary" href="{{ route('clientes.show') }}" role="button">Ficha Cliente</a>
+              <a class="btn btn-info" href="{{ route('clientes.campaign')}} " role="button">Compañia</a>
             </td>
           </tr>
         </tbody>

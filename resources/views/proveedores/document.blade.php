@@ -27,7 +27,6 @@
                       <th>#</th>
                       <th>Documento</th>
                       <th>Descripción</th>
-                      {{-- <th>Subir Documento</th> --}}
                       <th>¿Documento Enviado?</th>
                       <th>¿Documento Validado?</th>
                       <th>Documentos Recibidos</th>
@@ -38,10 +37,6 @@
                       <td>1</td>
                       <td>Escritura Empresa</td>
                       <td>Descripción de mi documento</td>
-                      {{-- <td>
-                        <input name="id_document[]" type="hidden" value="1">
-                        <input type="file" name="file_1">
-                      </td> --}}
                       <td>
                         <i class="fa fa-times-circle" style="color: #FF5722" aria-hidden="true"></i>
                       </td>
@@ -58,10 +53,6 @@
                       <td>2</td>
                       <td>Representante Legal</td>
                       <td>Descripción de mi documento</td>
-                      {{-- <td>
-                        <input name="id_document[]" type="hidden" value="2">
-                        <input type="file" name="file_2">
-                      </td> --}}
                       <td>
                         <i class="fa fa-times-circle" style="color: #FF5722" aria-hidden="true"></i>
                       </td>
@@ -78,10 +69,6 @@
                       <td>3</td>
                       <td>Últimos IVAs</td>
                       <td>Descripción de mi documento</td>
-                      {{-- <td>
-                        <input name="id_document[]" type="hidden" value="3">
-                        <input type="file" name="file_3">
-                      </td> --}}
                       <td>
                         <i class="fa fa-times-circle" style="color: #FF5722" aria-hidden="true"></i>
                       </td>
@@ -98,10 +85,6 @@
                       <td>4</td>
                       <td>Foto de la Empresa</td>
                       <td>Descripción de mi documento</td>
-                      {{-- <td>
-                        <input name="id_document[]" type="hidden" value="4">
-                        <input type="file" name="file_4">
-                      </td> --}}
                       <td>
                         <i class="fa fa-times-circle" style="color: #FF5722" aria-hidden="true"></i>
                       </td>
@@ -118,10 +101,6 @@
                       <td>5</td>
                       <td>Planilla de Empleados</td>
                       <td>Descripción de mi documento</td>
-                      {{-- <td>
-                        <input name="id_document[]" type="hidden" value="5">
-                        <input type="file" name="file_5">
-                      </td> --}}
                       <td>
                         <i class="fa fa-times-circle" style="color: #FF5722" aria-hidden="true"></i>
                       </td>

@@ -82,6 +82,18 @@
               </ul>
           </li>
 
+          <li class="nav-item nav-dropdown c-show">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon fa fa-pencil-square-o"></i>Administración</a>
+              <ul class="nav-dropdown-items">
+                  <li class="nav-item"><a class="nav-link" href="{{ route('admin.system') }}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Administración del Sistema</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('admin.rates') }}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Administración de Tarifas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('admin.profile') }}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Perfilamiento</a></li>
+              </ul>
+          </li>
+
+
+
           {{-- CERRAR SECCIÓN --}}
           {{-- <li class="nav-item">
               <a class="nav-link" href="">

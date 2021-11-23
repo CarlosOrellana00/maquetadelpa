@@ -57,6 +57,12 @@ Route::get('reportes',function(){return view('reportes.index');})->name('reporte
 Route::get('parametria',function(){return view('parametria.mantenedores');})->name('parametria.mantenedores');
 Route::get('parametria/config',function(){return view('parametria.config');})->name('parametria.config');
 
+//Administracion
+Route::get('admin/profile',function(){return view('admin.profile');})->name('admin.profile');
+Route::get('admin/rates',function(){return view('admin.rates');})->name('admin.rates');
+Route::get('admin/system',function(){return view('admin.system');})->name('admin.system');
+
+
 //Keke(carpeta de test)
 Route::get('keke',function(){return view('keke.index');})->name('keke.index');
 

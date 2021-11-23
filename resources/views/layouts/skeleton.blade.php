@@ -35,6 +35,7 @@
   <style type="text/css">
     .app-header {
       height: 140px;
+
     }
 
     .menu-delpa {

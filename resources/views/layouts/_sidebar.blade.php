@@ -15,40 +15,18 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('proveedores.index')}}">
-              <i class="nav-icon fa fa-id-card-o"></i>
-              <span>Proveedores</span>
-            </a>
+          <li class="nav-item nav-dropdown c-show">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon fa fa-pencil-square-o"></i> Proveedores</a>
+              <ul class="nav-dropdown-items">
+                  <li class="nav-item"><a class="nav-link" href="{{ route('proveedores.index')}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Administración</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('proveedores.config')}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Configuración</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('proveedores.contact')}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Contactos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('proveedores.document')}}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Documentos</a></li>
+              </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('proveedores.index')}}">
-              <i class="nav-icon fa fa-id-card-o"></i>
-              <span>Administración -Prov</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('proveedores.config')}}">
-              <i class="nav-icon fa fa-id-card-o"></i>
-              <span>Configuración -Prov</span>
-            </a>
-          </li>
-
-          {{--  --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('proveedores.contact')}}">
-              <i class="nav-icon fa fa-id-card-o"></i>
-              <span>Contactos -Prov</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('proveedores.document')}}">
-              <i class="nav-icon fa fa-id-card-o"></i>
-              <span>Documentos -Prov</span>
-            </a>
-          </li>
+          {{--PENDIENTES--}}
 
           {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('proveedores.tarifa')}}">
@@ -86,7 +64,7 @@
               <span>TAG -Prov</span>
             </a>
           </li> --}}
-          {{--  --}}
+          {{--FIN PENDIENTES  --}}
 
           <li class="nav-item">
             <a class="nav-link" href="{{ route('reportes.index') }}">
@@ -95,26 +73,22 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('parametria.mantenedores') }}">
-              <i class="nav-icon fa fa-bar-chart"></i>
-              <span>Parametria</span>
-            </a>
+          <li class="nav-item nav-dropdown c-show">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon fa fa-pencil-square-o"></i>Parametria</a>
+              <ul class="nav-dropdown-items">
+                  <li class="nav-item"><a class="nav-link" href="{{ route('parametria.mantenedores') }}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Mantenedores</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{{ route('parametria.config') }}">&nbsp;&nbsp;&nbsp;&nbsp;<i class="nav-icon fa fa-ship"></i> Personalización Sistema</a></li>
+              </ul>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('parametria.mantenedores') }}">
-              <i class="nav-icon fa fa-bar-chart"></i>
-              <span>Mantenedores -Para</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('parametria.config') }}">
-              <i class="nav-icon fa fa-bar-chart"></i>
-              <span>Personalización Sistema -Para</span>
-            </a>
-          </li>
+          {{-- CERRAR SECCIÓN --}}
+          {{-- <li class="nav-item">
+              <a class="nav-link" href="">
+                  <i class="nav-icon fa fa-sign-out"></i>
+                  <span>Cerrar Sesión</span>
+              </a>
+          </li> --}}
 
         </ul>
       </nav>

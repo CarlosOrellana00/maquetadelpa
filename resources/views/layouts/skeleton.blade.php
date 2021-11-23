@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="http://52.14.50.96/css/colorbox.css">
   <style type="text/css">
     .app-header {
-      height: 140px;
+      height: 100px;/* 140px */
 
     }
 
